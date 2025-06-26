@@ -1,0 +1,44 @@
+{
+    "navigation": {
+        "home": "Inicio",
+        "resume": "Currículum",
+        "works": "Proyectos",
+        "blogs": "Blog",
+        "contact": "Contacto"
+    },
+    "sidebar": {
+        "jobTitle": "Desarrollador Full Stack",
+        "phone": "Teléfono",
+        "location": "Ubicación",
+        "email": "Email",
+        "birthday": "Cumpleaños",
+        "downloadCV": "Descargar CV",
+        "profileDrawer": "Perfil",
+        "personalInfo": {
+            "location": "Quito, Ecuador",
+            "birthday": "12 de Enero, 2003"
+        }
+    },
+    "home": {
+        "greeting": "¡Hola! Soy",
+        "description": "Desarrollador Full Stack apasionado por crear experiencias digitales increíbles",
+        "viewProjects": "Ver mis proyectos",
+        "contactMe": "Contáctame",
+        "aboutMe": "Sobre mí",
+        "aboutDescription": "Soy un desarrollador full stack con más de 3 años de experiencia creando aplicaciones web y móviles modernas. Me especializo en React, Next.js, Node.js y tecnologías cloud. Me apasiona resolver problemas complejos y convertir ideas en productos digitales que impacten positivamente a las personas.",
+        "mySkills": "Mis habilidades",
+        "skills": {
+            "frontend": "Frontend",
+            "backend": "Backend",
+            "mobile": "Móvil",
+            "design": "Diseño"
+        }
+    },
+    "placeholders": {
+        "resumeSection": "Sección de Currículum",
+        "worksSection": "Sección de Proyectos",
+        "blogsSection": "Sección de Blog",
+        "contactSection": "Sección de Contacto",
+        "comingSoon": "Próximamente..."
+    }
+}
