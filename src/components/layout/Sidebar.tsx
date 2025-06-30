@@ -4,11 +4,21 @@ import { Phone, MapPin, Mail, Calendar, Download, Github, Linkedin, Twitter, Ins
 import { useLanguage } from '@/lib/context/LanguageContext'
 import { useTheme } from 'next-themes'
 import { theme } from '@/lib/theme'
+import Link from 'next/link'
 
 export default function Sidebar() {
     const { t } = useLanguage()
     const { theme: currentTheme } = useTheme()
     const colors = theme[currentTheme === 'dark' ? 'dark' : 'light']
+
+    const handleDownloadCV = () => {
+        const cvUrl = 'https://www.cvwizard.com/d/2IDkTody6vDiUySX9TGyha/view';
+        try {
+            window.location.href = cvUrl;
+        } catch (error) {
+            console.error('Error al abrir el CV:', error);
+        }
+    };
 
     const personalInfo = {
         name: "Jordan Talahua",
@@ -50,7 +60,7 @@ export default function Sidebar() {
             {/* Redes sociales */}
             <div className="flex justify-center gap-4 mb-8">
                 {socialLinks.map((social, index) => (
-                    <a
+                    <Link
                         key={index}
                         href={social.href}
                         target="_blank"
@@ -59,7 +69,7 @@ export default function Sidebar() {
                         className="p-2 rounded-lg transition-colors hover:opacity-80"
                     >
                         <social.icon size={18} style={{ color: social.color }} />
-                    </a>
+                    </Link>
                 ))}
             </div>
 
@@ -107,11 +117,16 @@ export default function Sidebar() {
             </div>
 
             {/* Botón de descarga CV */}
-            <button style={{ background: `linear-gradient(to right, ${colors.primary}, ${colors.secondary})` }}
-                className="w-full mt-6 text-white py-3 px-4 rounded-xl font-medium flex items-center justify-center gap-2 hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl">
+            <Link 
+                href="https://www.cvwizard.com/d/2IDkTody6vDiUySX9TGyha/view"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Ver CV en CVWizard"
+                style={{ background: `linear-gradient(to right, ${colors.primary}, ${colors.secondary})` }}
+                className="w-full mt-6 text-white py-3 px-4 rounded-xl font-medium flex items-center justify-center gap-2 hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer">
                 <Download size={18} />
                 {t("sidebar.downloadCV")}
-            </button>
+            </Link>
         </div>
     )
 } 
