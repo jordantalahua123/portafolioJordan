@@ -2,7 +2,7 @@
 
 import { useTheme } from 'next-themes'
 import { useState, useEffect } from 'react'
-import { Home, FileText, Briefcase, BookOpen, Mail, Sun, Moon, ChevronDown, Menu, X } from 'lucide-react'
+import { Home, FileText, Briefcase, BookOpen, Mail, Sun, Moon, ChevronDown, Menu, X, GraduationCap } from 'lucide-react'
 import { useLanguage } from '@/lib/context/LanguageContext'
 import { useNavigation } from '@/hooks/useNavigation'
 import { navigationItems } from '@/lib/utils'
@@ -12,6 +12,7 @@ import { theme } from '@/lib/theme'
 
 const iconMap = {
     Home,
+    GraduationCap,
     FileText,
     Briefcase,
     BookOpen,

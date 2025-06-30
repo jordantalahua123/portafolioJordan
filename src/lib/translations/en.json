@@ -1,6 +1,7 @@
 {
     "navigation": {
         "home": "Home",
+        "education": "Education",
         "resume": "Resume",
         "works": "Works",
         "blogs": "Blogs",
@@ -21,18 +22,37 @@
     },
     "home": {
         "greeting": "Hello! I'm",
-        "description": "Full Stack Developer passionate about creating amazing digital experiences",
+        "roles": {
+            "role1": "Software Engineer",
+            "role2": "Full Stack Developer",
+            "role3": "DevOps Specialist"
+        },
+        "description": "Full Stack Developer passionate about creating innovative technological solutions, with experience in modern architectures and performance optimization",
         "viewProjects": "View my projects",
         "contactMe": "Contact me",
-        "aboutMe": "About me",
-        "aboutDescription": "I'm a full stack developer with over 3 years of experience creating modern web and mobile applications. I specialize in React, Next.js, Node.js and cloud technologies. I'm passionate about solving complex problems and turning ideas into digital products that positively impact people.",
-        "mySkills": "My skills",
-        "skills": {
+        "downloadCV": "Download CV",
+        "metrics": {
+            "experience": "Years of Experience",
+            "projects": "Completed Projects",
+            "certifications": "Certifications",
+            "technologies": "Technologies"
+        },
+        "specialties": {
+            "title": "Specialties",
+            "fullstack": "Full Stack Development",
+            "cloud": "Cloud Architectures",
+            "devops": "DevOps & CI/CD",
+            "mobile": "Mobile Development"
+        },
+        "technologies": {
+            "title": "Technologies",
             "frontend": "Frontend",
             "backend": "Backend",
-            "mobile": "Mobile",
-            "design": "Design"
-        }
+            "databases": "Databases",
+            "devops": "DevOps"
+        },
+        "aboutMe": "About me",
+        "aboutDescription": "I'm a full stack developer with over 3 years of experience creating modern web and mobile applications. I specialize in React, Next.js, Node.js and cloud technologies. I'm passionate about solving complex problems and turning ideas into digital products that positively impact people."
     },
     "placeholders": {
         "resumeSection": "Resume Section",
@@ -40,5 +60,37 @@
         "blogsSection": "Blogs Section",
         "contactSection": "Contact Section",
         "comingSoon": "Coming soon..."
+    },
+    "education": {
+        "formal": "Formal Education",
+        "certifications": "Certifications",
+        "viewCertificate": "View Certificate",
+        "university": {
+            "title": "Engineering, Software Engineering",
+            "institution": "Universidad de las Fuerzas Armadas - ESPE",
+            "period": "Nov 2020 - Nov 2024"
+        },
+        "certificates": {
+            "python": {
+                "title": "Databases and SQL for Data Science with Python",
+                "description": "Design and management of relational databases, writing advanced SQL queries for extraction | Data transformation and analysis | Integration with Python (libraries like Pandas and SQLAlchemy) for ETL flow automation | Data visualization and dataset cleaning | Optimization of structures and queries to support predictive models and scalable solutions in analytical environments.",
+                "date": "May 2023"
+            },
+            "odoo": {
+                "title": "Odoo 16/17 Technical Course",
+                "description": "Odoo implementation in Ubuntu environments | Development of custom modules, widgets and advanced business logic | Python integration for data import and translation | Optimize ERP processes | Consolidated technical base for scaling adaptable and efficient solutions.",
+                "date": "Aug 2024"
+            },
+            "fullstack": {
+                "title": "Angular & Spring Boot: Full Stack",
+                "description": "Angular 17 (components, routes, services, Redux) | Spring Boot 3 (Spring Security, JWT, JPA/Hibernate) | Implementation of solutions like real-time chat (WebSocket) | Shopping carts and CRUD with RESTful APIs | Integrating pagination and advanced state management | Deployment on AWS (EC2, RDS, S3) following optimal security and performance practices.",
+                "date": "Nov 2024"
+            },
+            "mobile": {
+                "title": "Flutter Django MySQL",
+                "description": "Flutter | Django | MySQL | Google Maps | Clean Architecture | BLoC | Dependency Injection | Socket IO | Notifications",
+                "date": "Jan 2025"
+            }
+        }
     }
 }

@@ -1,13 +1,23 @@
 'use client'
 
-import { useState } from 'react'
+import { useRouter, usePathname } from 'next/navigation'
 
 export function useNavigation() {
-    const [activeSection, setActiveSection] = useState('home')
-
-    const navigateTo = (section: string) => {
-        setActiveSection(section)
+    const router = useRouter()
+    const pathname = usePathname()
+    
+    const getActiveSection = () => {
+        if (pathname === '/') return 'home'
+        return pathname.slice(1) // removes the leading slash
     }
 
-    return { activeSection, navigateTo }
+    const navigateTo = (section: string) => {
+        if (section === 'home') {
+            router.push('/')
+        } else {
+            router.push(`/${section}`)
+        }
+    }
+
+    return { activeSection: getActiveSection(), navigateTo }
 } 
