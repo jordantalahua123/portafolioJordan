@@ -146,7 +146,7 @@ export default function Home() {
                 transition={{ delay: 0.3, duration: 0.6 }}
                 className="grid grid-cols-2 md:grid-cols-4 gap-6"
             >
-                {metrics.map((metric, index) => (
+                {metrics.map((metric) => (
                     <div
                         key={metric.label}
                         style={{ backgroundColor: colors.muted }}
@@ -169,12 +169,12 @@ export default function Home() {
             >
                 <h2 className="text-2xl font-bold text-center mb-8">{t("home.technologies.title")}</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {Object.entries(technologies).map(([category, techs], index) => (
+                    {Object.entries(technologies).map(([category, techs], i) => (
                         <motion.div
                             key={category}
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.7 + index * 0.1, duration: 0.6 }}
+                            transition={{ delay: 0.7 + i * 0.1, duration: 0.6 }}
                             style={{ backgroundColor: colors.muted }}
                             className="rounded-2xl p-6"
                         >

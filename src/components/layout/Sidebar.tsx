@@ -11,15 +11,6 @@ export default function Sidebar() {
     const { theme: currentTheme } = useTheme()
     const colors = theme[currentTheme === 'dark' ? 'dark' : 'light']
 
-    const handleDownloadCV = () => {
-        const cvUrl = 'https://www.cvwizard.com/d/2IDkTody6vDiUySX9TGyha/view';
-        try {
-            window.location.href = cvUrl;
-        } catch (error) {
-            console.error('Error al abrir el CV:', error);
-        }
-    };
-
     const personalInfo = {
         name: "Jordan Talahua",
         title: t("sidebar.jobTitle"),
