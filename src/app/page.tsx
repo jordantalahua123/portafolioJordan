@@ -1,7 +1,7 @@
 'use client'
 
 import { useNavigation } from '@/hooks/useNavigation'
-import { useLanguage } from '@/hooks/useLanguage'
+import { useLanguage } from '@/lib/context/LanguageContext'
 import Home from '@/components/sections/Home'
 
 export default function Page() {

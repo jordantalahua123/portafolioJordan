@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { createContext, useContext, useState, useEffect, ReactNode } from 'react'
 import esTranslations from '@/lib/translations/es.json'
 import enTranslations from '@/lib/translations/en.json'
 
@@ -28,7 +28,15 @@ function getNestedValue(obj: Record<string, unknown>, path: string): string {
     return typeof current === 'string' ? current : path
 }
 
-export function useLanguage() {
+interface LanguageContextType {
+    language: Language
+    toggleLanguage: (newLang: Language) => void
+    t: (key: string) => string
+}
+
+const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
+
+export function LanguageProvider({ children }: { children: ReactNode }) {
     const [language, setLanguage] = useState<Language>('es')
 
     useEffect(() => {
@@ -47,5 +55,17 @@ export function useLanguage() {
         return getNestedValue(translations[language] as Record<string, unknown>, key)
     }
 
-    return { language, toggleLanguage, t }
+    return (
+        <LanguageContext.Provider value={{ language, toggleLanguage, t }}>
+            {children}
+        </LanguageContext.Provider>
+    )
+}
+
+export function useLanguage() {
+    const context = useContext(LanguageContext)
+    if (context === undefined) {
+        throw new Error('useLanguage must be used within a LanguageProvider')
+    }
+    return context
 } 
