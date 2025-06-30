@@ -2,7 +2,7 @@
     "navigation": {
         "home": "Inicio",
         "education": "Educación",
-        "resume": "Currículum",
+        "skills": "Habilidades",
         "works": "Proyectos",
         "blogs": "Blog",
         "contact": "Contacto"
@@ -60,6 +60,20 @@
         "blogsSection": "Sección de Blog",
         "contactSection": "Sección de Contacto",
         "comingSoon": "Próximamente..."
+    },
+    "skills": {
+        "title": "Habilidades Técnicas",
+        "subtitle": "Interactúa con las esferas para explorar mis competencias",
+        "instructions": "💡 Arrastra para rotar • Rueda del mouse para zoom • Pasa el cursor sobre las esferas",
+        "categories": {
+            "frontend": "🎯 Frontend",
+            "backend": "⚙️ Backend", 
+            "database": "🗄️ Bases de Datos",
+            "devops": "🚀 DevOps",
+            "mobile": "📱 Móvil",
+            "design": "🎨 Diseño",
+            "tools": "🛠️ Herramientas"
+        }
     },
     "education": {
         "formal": "Educación Formal",

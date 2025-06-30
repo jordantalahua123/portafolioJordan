@@ -2,7 +2,7 @@
     "navigation": {
         "home": "Home",
         "education": "Education",
-        "resume": "Resume",
+        "skills": "Skills",
         "works": "Works",
         "blogs": "Blogs",
         "contact": "Contact"
@@ -60,6 +60,20 @@
         "blogsSection": "Blogs Section",
         "contactSection": "Contact Section",
         "comingSoon": "Coming soon..."
+    },
+    "skills": {
+        "title": "Technical Skills",
+        "subtitle": "Interact with the spheres to explore my competencies",
+        "instructions": "💡 Drag to rotate • Mouse wheel to zoom • Hover over spheres",
+        "categories": {
+            "frontend": "🎯 Frontend",
+            "backend": "⚙️ Backend",
+            "database": "🗄️ Databases", 
+            "devops": "🚀 DevOps",
+            "mobile": "📱 Mobile",
+            "design": "🎨 Design",
+            "tools": "🛠️ Tools"
+        }
     },
     "education": {
         "formal": "Formal Education",
