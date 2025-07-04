@@ -4,6 +4,7 @@ import { useTheme } from 'next-themes'
 import { theme } from '@/lib/theme'
 import Sidebar from './Sidebar'
 import Navbar from './Navbar'
+import { usePathname } from 'next/navigation'
 
 interface MainLayoutProps {
     children: React.ReactNode
@@ -12,7 +13,9 @@ interface MainLayoutProps {
 export default function MainLayout({ children }: MainLayoutProps) {
     const { theme: currentTheme } = useTheme()
     const colors = theme[currentTheme === 'dark' ? 'dark' : 'light']
-
+    const pathname = usePathname()
+    
+    // Layout normal para todas las páginas
     return (
         <div className="min-h-screen transition-colors" style={{ backgroundColor: colors.background, color: colors.foreground }}>
             <div className="h-screen flex overflow-hidden">
