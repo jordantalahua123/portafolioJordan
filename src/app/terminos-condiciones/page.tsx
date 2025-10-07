@@ -14,8 +14,8 @@ export default function TerminosCondicionesPage() {
 
                 <div className="text-gray-700 dark:text-gray-300 space-y-6">
                     <p>
-                        Estos términos y condiciones (en adelante "Términos") regulan el uso de la plataforma digital EcuaRoad, 
-                        accesible a través de su aplicación móvil (en adelante "Plataforma"), operada por AiroSoft (en adelante "EcuaRoad"), 
+                        Estos términos y condiciones (en adelante &quot;Términos&quot;) regulan el uso de la plataforma digital EcuaRoad, 
+                        accesible a través de su aplicación móvil (en adelante &quot;Plataforma&quot;), operada por AiroSoft (en adelante &quot;EcuaRoad&quot;), 
                         y constituyen un acuerdo legalmente vinculante para las partes involucradas.
                     </p>
 
@@ -50,18 +50,18 @@ export default function TerminosCondicionesPage() {
 
                     <section>
                         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">2. PARTES</h2>
-                        <p>
-                            Por una parte, AiroSoft, con RUC 0503114126, (en adelante "EcuaRoad"), es la compañía administradora de la 
-                            Plataforma a través de la cual se ofertan sus servicios.
-                        </p>
-                        <p>
-                            Por otra parte, la persona natural (en adelante "Usuario"), es quien establece una relación con EcuaRoad a través 
-                            del uso de los servicios ofertados por la Plataforma. El Usuario acepta estos Términos en las condiciones 
-                            detalladas a continuación.
-                        </p>
-                        <p>
-                            La Empresa y el Usuario podrán ser referidos individualmente como "Parte" y de manera conjunta como "Partes".
-                        </p>
+                            <p>
+                                Por una parte, AiroSoft, con RUC 0503114126, (en adelante &quot;EcuaRoad&quot;), es la compañía administradora de la 
+                                Plataforma a través de la cual se ofertan sus servicios.
+                            </p>
+                            <p>
+                                Por otra parte, la persona natural (en adelante &quot;Usuario&quot;), es quien establece una relación con EcuaRoad a través 
+                                del uso de los servicios ofertados por la Plataforma. El Usuario acepta estos Términos en las condiciones 
+                                detalladas a continuación.
+                            </p>
+                            <p>
+                                La Empresa y el Usuario podrán ser referidos individualmente como &quot;Parte&quot; y de manera conjunta como &quot;Partes&quot;.
+                            </p>
                     </section>
 
                     <section>
@@ -174,7 +174,7 @@ export default function TerminosCondicionesPage() {
                             <li>Información desactualizada por cambios rápidos en condiciones viales</li>
                         </ul>
                         <p>
-                            <strong>EXENCIÓN DE GARANTÍAS:</strong> La información en EcuaRoad se proporciona "TAL CUAL" sin garantías de 
+                            <strong>EXENCIÓN DE GARANTÍAS:</strong> La información en EcuaRoad se proporciona &quot;TAL CUAL&quot; sin garantías de 
                             ningún tipo. Cada Usuario asume total responsabilidad por sus decisiones de conducción y navegación.
                         </p>
                     </section>
@@ -255,7 +255,7 @@ export default function TerminosCondicionesPage() {
                             exclusiva de la empresa, incluyendo:
                         </p>
                         <ul className="list-disc pl-6 space-y-2">
-                            <li>Marca "EcuaRoad" y logotipos</li>
+                            <li>Marca &quot;EcuaRoad&quot; y logotipos</li>
                             <li>Código fuente de la aplicación</li>
                             <li>Diseño de interfaz de usuario</li>
                             <li>Algoritmos y funcionalidades</li>

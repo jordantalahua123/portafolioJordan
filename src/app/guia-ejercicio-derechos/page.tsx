@@ -83,8 +83,8 @@ export default function GuiaEjercicioDerechosPage() {
                                 <div className="bg-green-50 dark:bg-green-900/20 p-3 rounded mt-2">
                                     <p className="text-sm"><strong>Ejemplo práctico en EcuaRoad:</strong></p>
                                     <p className="text-sm italic">
-                                        "Quiero saber qué datos personales tienen sobre mí, cuántos reportes viales he generado, y qué información 
-                                        de ubicación han almacenado."
+                                        &quot;Quiero saber qué datos personales tienen sobre mí, cuántos reportes viales he generado, y qué información 
+                                        de ubicación han almacenado.&quot;
                                     </p>
                                 </div>
                             </div>
@@ -94,13 +94,13 @@ export default function GuiaEjercicioDerechosPage() {
                                 <p>El titular puede solicitar la corrección o actualización de sus datos cuando sean inexactos, incompletos o desactualizados.</p>
                                 <p className="mt-2"><strong>Cómo ejercerlo en EcuaRoad:</strong></p>
                                 <ul className="list-disc pl-6 space-y-1">
-                                    <li><strong>Directamente en la app:</strong> Acceder a "Configuración" → "Mi Perfil" → Editar datos</li>
+                                    <li><strong>Directamente en la app:</strong> Acceder a &quot;Configuración&quot; → &quot;Mi Perfil&quot; → Editar datos</li>
                                     <li><strong>Por solicitud formal:</strong> Si no puede hacerlo directamente, enviar solicitud a jordantalahua@gmail.com</li>
                                 </ul>
                                 <div className="bg-green-50 dark:bg-green-900/20 p-3 rounded mt-2">
                                     <p className="text-sm"><strong>Ejemplo práctico:</strong></p>
                                     <p className="text-sm italic">
-                                        "Mi número de teléfono cambió de [número anterior] a [número nuevo], necesito actualizarlo."
+                                        &quot;Mi número de teléfono cambió de [número anterior] a [número nuevo], necesito actualizarlo.&quot;
                                     </p>
                                 </div>
                             </div>
@@ -223,25 +223,25 @@ export default function GuiaEjercicioDerechosPage() {
                                             <div className="bg-green-100 dark:bg-green-900/30 p-3 rounded">
                                                 <p className="text-sm font-semibold">✅ CORRECTO:</p>
                                                 <p className="text-sm italic">
-                                                    "Solicito ejercer mi derecho de ACCESO. Requiero copia de todos mis datos personales almacenados, 
+                                                    &quot;Solicito ejercer mi derecho de ACCESO. Requiero copia de todos mis datos personales almacenados, 
                                                     incluyendo mi información de perfil, historial de reportes viales generados desde enero 2025, y 
-                                                    datos de geolocalización asociados a mi cuenta."
+                                                    datos de geolocalización asociados a mi cuenta.&quot;
                                                 </p>
                                             </div>
 
                                             <div className="bg-green-100 dark:bg-green-900/30 p-3 rounded">
                                                 <p className="text-sm font-semibold">✅ CORRECTO:</p>
                                                 <p className="text-sm italic">
-                                                    "Solicito ejercer mi derecho de SUPRESIÓN. Requiero la eliminación completa de mi cuenta de EcuaRoad 
+                                                    &quot;Solicito ejercer mi derecho de SUPRESIÓN. Requiero la eliminación completa de mi cuenta de EcuaRoad 
                                                     y todos mis datos personales asociados, incluyendo nombre, correo [correo@ejemplo.com], teléfono, 
-                                                    cédula y historial de uso."
+                                                    cédula y historial de uso.&quot;
                                                 </p>
                                             </div>
 
                                             <div className="bg-red-100 dark:bg-red-900/30 p-3 rounded">
                                                 <p className="text-sm font-semibold">❌ INCORRECTO:</p>
                                                 <p className="text-sm italic">
-                                                    "Quiero saber qué tienen sobre mí." (Muy vago, especificar derecho de acceso y qué datos específicamente)
+                                                    &quot;Quiero saber qué tienen sobre mí.&quot; (Muy vago, especificar derecho de acceso y qué datos específicamente)
                                                 </p>
                                             </div>
                                         </div>
@@ -274,7 +274,7 @@ export default function GuiaEjercicioDerechosPage() {
                                 <div className="space-y-3">
                                     <p><strong>Método preferido:</strong> Correo electrónico</p>
                                     <p><strong>Dirección:</strong> <a href="mailto:jordantalahua@gmail.com" className="text-blue-600 dark:text-blue-400 hover:underline">jordantalahua@gmail.com</a></p>
-                                    <p><strong>Asunto del correo:</strong> "Solicitud Ejercicio de Derecho [TIPO DE DERECHO] - [TU NOMBRE]"</p>
+                                    <p><strong>Asunto del correo:</strong> &quot;Solicitud Ejercicio de Derecho [TIPO DE DERECHO] - [TU NOMBRE]&quot;</p>
 
                                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded mt-3">
                                         <p className="font-semibold mb-2">Ejemplo:</p>
