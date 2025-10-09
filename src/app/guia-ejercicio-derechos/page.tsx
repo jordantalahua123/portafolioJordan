@@ -95,7 +95,7 @@ export default function GuiaEjercicioDerechosPage() {
                                 <p className="mt-2"><strong>Cómo ejercerlo en EcuaRoad:</strong></p>
                                 <ul className="list-disc pl-6 space-y-1">
                                     <li><strong>Directamente en la app:</strong> Acceder a &quot;Configuración&quot; → &quot;Mi Perfil&quot; → Editar datos</li>
-                                    <li><strong>Por solicitud formal:</strong> Si no puede hacerlo directamente, enviar solicitud a jordantalahua@gmail.com</li>
+                                    <li><strong>Por solicitud formal:</strong> Si no puede hacerlo directamente, enviar solicitud a airosoft.ec@gmail.com</li>
                                 </ul>
                                 <div className="bg-green-50 dark:bg-green-900/20 p-3 rounded mt-2">
                                     <p className="text-sm"><strong>Ejemplo práctico:</strong></p>
@@ -273,7 +273,7 @@ export default function GuiaEjercicioDerechosPage() {
                                 
                                 <div className="space-y-3">
                                     <p><strong>Método preferido:</strong> Correo electrónico</p>
-                                    <p><strong>Dirección:</strong> <a href="mailto:jordantalahua@gmail.com" className="text-blue-600 dark:text-blue-400 hover:underline">jordantalahua@gmail.com</a></p>
+                                    <p><strong>Dirección:</strong> <a href="mailto:airosoft.ec@gmail.com" className="text-blue-600 dark:text-blue-400 hover:underline">airosoft.ec@gmail.com</a></p>
                                     <p><strong>Asunto del correo:</strong> &quot;Solicitud Ejercicio de Derecho [TIPO DE DERECHO] - [TU NOMBRE]&quot;</p>
 
                                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded mt-3">
@@ -398,7 +398,7 @@ Fecha: [FECHA]`}
                                         <h4 className="font-semibold">Opción 1: Solicitud de Revisión Interna</h4>
                                         <p className="text-sm">
                                             Dentro de 10 días hábiles desde la respuesta, puede solicitar una revisión interna dirigida al Delegado 
-                                            de Protección de Datos de EcuaRoad a <a href="mailto:jordantalahua@gmail.com" className="text-blue-600 dark:text-blue-400 hover:underline">jordantalahua@gmail.com</a>
+                                            de Protección de Datos de EcuaRoad a <a href="mailto:airosoft.ec@gmail.com" className="text-blue-600 dark:text-blue-400 hover:underline">airosoft.ec@gmail.com</a>
                                         </p>
                                     </div>
 
@@ -468,7 +468,7 @@ Fecha: [FECHA]`}
                         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">CONTACTO PARA EJERCICIO DE DERECHOS</h2>
                         <div className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
                             <p><strong>Responsable de Protección de Datos:</strong> EcuaRoad</p>
-                            <p className="mt-2"><strong>Correo electrónico:</strong> <a href="mailto:jordantalahua@gmail.com" className="text-blue-600 dark:text-blue-400 hover:underline">jordantalahua@gmail.com</a></p>
+                            <p className="mt-2"><strong>Correo electrónico:</strong> <a href="mailto:airosoft.ec@gmail.com" className="text-blue-600 dark:text-blue-400 hover:underline">airosoft.ec@gmail.com</a></p>
                             <p><strong>Teléfono:</strong> +593 969 183 227</p>
                             <p><strong>Dirección física:</strong> Latacunga, Ecuador</p>
                             <p><strong>Sitio web:</strong> <a href="https://jordantalahua.netlify.app/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">https://jordantalahua.netlify.app/</a></p>

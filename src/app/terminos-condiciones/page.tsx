@@ -323,7 +323,7 @@ export default function TerminosCondicionesPage() {
                             <li>Revocar consentimiento en cualquier momento</li>
                         </ul>
                         <p>
-                            Para ejercer estos derechos, contactar a: <a href="mailto:jordantalahua@gmail.com" className="text-blue-600 dark:text-blue-400 hover:underline">jordantalahua@gmail.com</a>
+                            Para ejercer estos derechos, contactar a: <a href="mailto:airosoft.ec@gmail.com" className="text-blue-600 dark:text-blue-400 hover:underline">airosoft.ec@gmail.com</a>
                         </p>
                     </section>
 
@@ -384,7 +384,7 @@ export default function TerminosCondicionesPage() {
                         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">14. CONTACTO</h2>
                         <p>Para preguntas, consultas o ejercicio de derechos:</p>
                         <div className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg mt-4">
-                            <p><strong>Correo electrónico:</strong> <a href="mailto:jordantalahua@gmail.com" className="text-blue-600 dark:text-blue-400 hover:underline">jordantalahua@gmail.com</a></p>
+                            <p><strong>Correo electrónico:</strong> <a href="mailto:airosoft.ec@gmail.com" className="text-blue-600 dark:text-blue-400 hover:underline">airosoft.ec@gmail.com</a></p>
                             <p><strong>Sitio web:</strong> <a href="https://jordantalahua.netlify.app/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">https://jordantalahua.netlify.app/</a></p>
                             <p><strong>Dirección:</strong> Latacunga</p>
                             <p><strong>Teléfono:</strong> +593 969 183 227</p>

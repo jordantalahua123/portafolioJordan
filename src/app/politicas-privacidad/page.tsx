@@ -29,7 +29,7 @@ export default function PoliticasPrivacidadPage() {
                             AiroSoft, identificada con Registro Único de Contribuyentes (RUC) 0503114126001, es responsable del tratamiento 
                             de los datos personales conforme a la legislación vigente. Para cualquier consulta o solicitud relacionada con el 
                             tratamiento de sus datos personales, puede contactarnos a través del correo electrónico oficial: 
-                            <a href="mailto:jordantalahua@gmail.com" className="text-blue-600 dark:text-blue-400 hover:underline ml-1">jordantalahua@gmail.com</a>
+                            <a href="mailto:airosoft.ec@gmail.com" className="text-blue-600 dark:text-blue-400 hover:underline ml-1">airosoft.ec@gmail.com</a>
                         </p>
                     </section>
 
@@ -501,7 +501,7 @@ export default function PoliticasPrivacidadPage() {
                         <p>
                             EcuaRoad NO está dirigida a menores de 18 años. No recopilamos conscientemente información personal de menores. 
                             Si un padre o tutor descubre que un menor ha proporcionado información personal sin su consentimiento, debe 
-                            contactarnos inmediatamente a <a href="mailto:jordantalahua@gmail.com" className="text-blue-600 dark:text-blue-400 hover:underline">jordantalahua@gmail.com</a> para 
+                            contactarnos inmediatamente a <a href="mailto:airosoft.ec@gmail.com" className="text-blue-600 dark:text-blue-400 hover:underline">airosoft.ec@gmail.com</a> para 
                             proceder con la eliminación de dichos datos.
                         </p>
                     </section>
@@ -512,7 +512,7 @@ export default function PoliticasPrivacidadPage() {
                             Si tiene preguntas, inquietudes o desea ejercer sus derechos sobre protección de datos personales, puede contactarnos a través de:
                         </p>
                         <div className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg mt-4">
-                            <p><strong>Correo electrónico:</strong> <a href="mailto:jordantalahua@gmail.com" className="text-blue-600 dark:text-blue-400 hover:underline">jordantalahua@gmail.com</a></p>
+                            <p><strong>Correo electrónico:</strong> <a href="mailto:airosoft.ec@gmail.com" className="text-blue-600 dark:text-blue-400 hover:underline">airosoft.ec@gmail.com</a></p>
                             <p><strong>Teléfono:</strong> +593 969 183 227</p>
                             <p><strong>Dirección física:</strong> Latacunga</p>
                             <p className="mt-4"><strong>Guía para ejercicio de derechos:</strong> <a href="/guia-ejercicio-derechos" className="text-blue-600 dark:text-blue-400 hover:underline">Ver Guía Completa</a></p>
