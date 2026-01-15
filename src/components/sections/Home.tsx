@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useSpring, animated } from '@react-spring/web'
 import { 
     FaReact, FaVuejs, FaNodeJs, FaDocker, FaGithub, FaLinkedin,
-    FaDatabase, FaCloud 
+    FaDatabase, FaCloud, FaCode 
 } from 'react-icons/fa'
 import { 
     SiNextdotjs, SiTypescript, SiTailwindcss, SiExpress, 
@@ -14,6 +14,7 @@ import {
 import { useLanguage } from '@/lib/context/LanguageContext'
 import { useTheme } from 'next-themes'
 import { theme } from '@/lib/theme'
+import Link from 'next/link'
 
 export default function Home() {
     const { t } = useLanguage()
@@ -40,9 +41,9 @@ export default function Home() {
 
     const metrics = [
         { number: 3, label: t('home.metrics.experience'), suffix: '+' },
-        { number: 10, label: t('home.metrics.projects'), suffix: '+' },
-        { number: 6, label: t('home.metrics.certifications'), suffix: '' },
-        { number: 8, label: t('home.metrics.technologies'), suffix: '+' }
+        { number: 15, label: t('home.metrics.projects'), suffix: '+' },
+        { number: 4, label: t('home.metrics.certifications'), suffix: '+' },
+        { number: 20, label: t('home.metrics.technologies'), suffix: '+' }
     ]
 
     const technologies = {
@@ -55,17 +56,27 @@ export default function Home() {
         ],
         backend: [
             { icon: FaNodeJs, name: 'Node.js' },
-            { icon: SiExpress, name: 'Express' }
+            { icon: SiExpress, name: 'Express' },
+            { icon: FaDatabase, name: 'Spring Boot' },
+            { icon: FaCode, name: 'Laravel' },
+            { icon: FaDatabase, name: 'Django' }
         ],
         databases: [
             { icon: SiMongodb, name: 'MongoDB' },
             { icon: SiPostgresql, name: 'PostgreSQL' },
-            { icon: FaDatabase, name: 'MySQL' }
+            { icon: FaDatabase, name: 'MySQL' },
+            { icon: FaDatabase, name: 'SQL Server' }
         ],
         devops: [
             { icon: FaDocker, name: 'Docker' },
             { icon: FaCloud, name: 'Azure' },
-            { icon: SiJenkins, name: 'Jenkins' }
+            { icon: SiJenkins, name: 'Jenkins' },
+            { icon: FaCloud, name: 'Kubernetes' }
+        ],
+        analytics: [
+            { icon: FaDatabase, name: 'Power BI' },
+            { icon: FaDatabase, name: 'ETL' },
+            { icon: FaDatabase, name: 'BI' }
         ]
     }
 
@@ -126,14 +137,14 @@ export default function Home() {
                             transition={{ delay: 0.6, duration: 0.6 }}
                             className="flex flex-wrap gap-4"
                         >
-                            <button style={{ backgroundColor: colors.background, color: colors.foreground }} 
+                            <Link href="/works" style={{ backgroundColor: colors.background, color: colors.foreground }} 
                                 className="px-6 py-3 rounded-xl font-semibold hover:opacity-90 transition-opacity shadow-lg">
                                 {t("home.viewProjects")}
-                            </button>
-                            <button style={{ borderColor: colors.background, color: colors.background }} 
+                            </Link>
+                            <Link href="/contact" style={{ borderColor: colors.background, color: colors.background }} 
                                 className="border-2 px-6 py-3 rounded-xl font-semibold hover:bg-white/10 transition-colors">
                                 {t("home.contactMe")}
-                            </button>
+                            </Link>
                         </motion.div>
                     </div>
                 </div>
@@ -168,7 +179,7 @@ export default function Home() {
                 className="space-y-8"
             >
                 <h2 className="text-2xl font-bold text-center mb-8">{t("home.technologies.title")}</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
                     {Object.entries(technologies).map(([category, techs], i) => (
                         <motion.div
                             key={category}

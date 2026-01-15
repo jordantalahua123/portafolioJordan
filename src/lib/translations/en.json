@@ -1,6 +1,7 @@
 {
     "navigation": {
         "home": "Home",
+        "experience": "Experience",
         "education": "Education",
         "skills": "Skills",
         "works": "Works",
@@ -27,7 +28,7 @@
             "role2": "Full Stack Developer",
             "role3": "DevOps Specialist"
         },
-        "description": "Full Stack Developer passionate about creating innovative technological solutions, with experience in modern architectures and performance optimization",
+        "description": "Full Stack Developer passionate about creating innovative technological solutions, with experience in modern architectures, microservices and performance optimization",
         "viewProjects": "View my projects",
         "contactMe": "Contact me",
         "downloadCV": "Download CV",
@@ -49,10 +50,11 @@
             "frontend": "Frontend",
             "backend": "Backend",
             "databases": "Databases",
-            "devops": "DevOps"
+            "devops": "DevOps",
+            "analytics": "Data Analytics"
         },
         "aboutMe": "About me",
-        "aboutDescription": "I'm a full stack developer with over 3 years of experience creating modern web and mobile applications. I specialize in React, Next.js, Node.js and cloud technologies. I'm passionate about solving complex problems and turning ideas into digital products that positively impact people."
+        "aboutDescription": "Software engineer with over 3 years of experience creating modern web and mobile applications. Specialized in microservices architectures, full stack development and cloud solutions. I've worked with technologies like Spring Boot, Angular, Node.js, Flutter and Azure, optimizing financial systems, social platforms and enterprise applications. I'm passionate about solving complex problems and turning ideas into digital products that make a positive impact."
     },
     "placeholders": {
         "resumeSection": "Resume Section",
@@ -104,6 +106,185 @@
                 "title": "Flutter Django MySQL",
                 "description": "Flutter | Django | MySQL | Google Maps | Clean Architecture | BLoC | Dependency Injection | Socket IO | Notifications",
                 "date": "Jan 2025"
+            }
+        }
+    },
+    "experience": {
+        "title": "Work Experience",
+        "current": "Current",
+        "viewDetails": "View Details",
+        "technologies": "Technologies",
+        "responsibilities": "Responsibilities",
+        "jobs": {
+            "recycob": {
+                "title": "Programmer Analyst",
+                "company": "Recycob",
+                "location": "Quito",
+                "period": "April 2025 - October 2025",
+                "description": "Comprehensive management of payment systems and bank connectivity in microservices architecture",
+                "responsibilities": [
+                    "Comprehensive management of payment systems and bank connectivity in microservices architecture with Spring Boot as main backend",
+                    "Development and maintenance of Angular frontend integrated with microservices, ensuring smooth user experience for complex financial operations",
+                    "Implementation of ETL processes with C# for financial data transformation and migration",
+                    "Design and development of automatic audits in SQL Server, creating stored procedures and triggers for real-time transaction monitoring",
+                    "Database performance optimization through efficient stored procedures implementation"
+                ],
+                "technologies": ["Spring Boot", "Angular", "C#", "SQL Server", "Microservices", "ETL"]
+            },
+            "seneca": {
+                "title": "Full Stack Mobile Developer",
+                "company": "Seneca-Corp",
+                "location": "Quito",
+                "period": "March 2025 - April 2025",
+                "description": "Development of condominium management platform with payment gateway integration",
+                "responsibilities": [
+                    "Condominium management, frontend Vue.js 3 + Vuestic UI, backend: Node.js + TypeScript + Express + Sequelize connected to PostgreSQL",
+                    "Integration of PAGOPLUX payment gateway for financial transaction processing",
+                    "Mobile application with Flutter and Flutter Stacked for Android and iOS",
+                    "Implementation of DevOps + Git + Docker + Docker Compose practices",
+                    "Successful deployment of web platform on Azure and publication of mobile application on respective stores"
+                ],
+                "technologies": ["Vue.js 3", "Node.js", "TypeScript", "Flutter", "PostgreSQL", "Docker", "Azure", "PAGOPLUX"]
+            },
+            "pool": {
+                "title": "Full Stack Mobile Developer",
+                "company": "POOL - University Social Network",
+                "location": "Quito",
+                "period": "November 2024 - February 2025",
+                "description": "Development of university social network with scalable architecture and real-time chat",
+                "responsibilities": [
+                    "Development of Pool application, integrating a scalable backend in Node.js with TypeScript under MVC architecture",
+                    "Mobile frontend in Flutter based on Clean Architecture + BLoC to ensure maintainable and modular code",
+                    "SendGrid integration for transactional notifications",
+                    "Implementation of Pub/Sub with WebSockets for real-time chats",
+                    "Multimedia storage management in Azure Storage",
+                    "MongoDB for community and announcement data modeling"
+                ],
+                "technologies": ["Node.js", "TypeScript", "Flutter", "MongoDB", "WebSockets", "Azure", "SendGrid", "Clean Architecture", "BLoC"]
+            },
+            "kuntursoft": {
+                "title": "Full Stack Developer",
+                "company": "Kuntursoft S.A.S",
+                "location": "Tulcán",
+                "period": "October 2023 - June 2024",
+                "description": "Odoo development and Linux Server infrastructure management",
+                "responsibilities": [
+                    "FrontEnd developer in Odoo system, server manager on Linux Server and documentation management",
+                    "Implementation of RESTful architectures for service integration and improvement of application communication",
+                    "Full Stack application development in Odoo, integrating custom solutions and optimizing workflows",
+                    "Implementation of DevOps practices in web application deployment, improving development cycle efficiency"
+                ],
+                "technologies": ["Odoo", "Python", "Linux", "PostgreSQL", "RESTful APIs", "DevOps"]
+            },
+            "epmhv": {
+                "title": "Information and Communication Technology Assistant",
+                "company": "Metropolitan Public Company of Habitat and Housing",
+                "location": "Quito",
+                "period": "August 2023 - October 2023",
+                "description": "Systems, networks and information technology management",
+                "responsibilities": [
+                    "Systems, networks and information technology management, data analysis and technical support",
+                    "Odoo application development to optimize internal processes",
+                    "Implementation of cybersecurity measures to protect technological infrastructure",
+                    "Maintenance of operational efficiency and organization security through technology"
+                ],
+                "technologies": ["Odoo", "Python", "Networks", "Cybersecurity"]
+            },
+            "estelarsoft": {
+                "title": "Freelance Full Stack Developer Web | Mobile",
+                "company": "EstelarSoft",
+                "location": "Quito, Ecuador",
+                "period": "March 2024 - Present",
+                "description": "CEO of EstelarSoft - Freelance software development",
+                "responsibilities": [
+                    "Development of customized solutions for clients",
+                    "Web and mobile development project management",
+                    "Technical consulting and software architecture"
+                ],
+                "technologies": ["Full Stack", "Web", "Mobile"]
+            },
+            "fenix": {
+                "title": "Software Developer",
+                "company": "Fenix Corp Ecuador",
+                "location": "Latacunga, Cotopaxi",
+                "period": "March 2022 - June 2022",
+                "description": "Backend development and desktop application optimization",
+                "responsibilities": [
+                    "Backend software developer Laravel: MakiPOS - JSON Administrator",
+                    "Creation of module for API consumption",
+                    "Maintenance of desktop software C# - Download Update Fenix",
+                    "Performance optimization of desktop file download application"
+                ],
+                "technologies": ["Laravel", "C#", "APIs", "MySQL"]
+            },
+            "espe": {
+                "title": "Full Stack Developer",
+                "company": "Universidad de las Fuerzas Armadas - ESPE",
+                "location": "Latacunga",
+                "period": "May 2023 - August 2023",
+                "description": "Website development for video game tournament management",
+                "responsibilities": [
+                    "Frontend developer of GamerFest website",
+                    "Development of system for video game tournament management at the University",
+                    "Implementation with Vue.js, Laravel and MySQL"
+                ],
+                "technologies": ["Vue.js", "Laravel", "MySQL"]
+            }
+        }
+    },
+    "works": {
+        "title": "Featured Projects",
+        "viewProject": "View Project",
+        "viewDemo": "View Demo",
+        "viewCode": "View Code",
+        "technologies": "Technologies",
+        "description": "Description",
+        "projects": {
+            "pool": {
+                "title": "POOL - University Social Network",
+                "description": "Social network platform for university students with real-time chat, communities, announcements and notifications.",
+                "features": [
+                    "Real-time chat with WebSockets",
+                    "Community and announcement system",
+                    "Transactional notifications with SendGrid",
+                    "Multimedia storage in Azure",
+                    "Clean Architecture + BLoC in Flutter"
+                ],
+                "technologies": ["Node.js", "TypeScript", "Flutter", "MongoDB", "WebSockets", "Azure", "SendGrid"]
+            },
+            "ammeno": {
+                "title": "Ammeno - Condominium Management",
+                "description": "Complete platform for condominium management with integrated payments, common area reservations and resident communication.",
+                "features": [
+                    "Management of aliquot and service payments",
+                    "Common area reservation system",
+                    "Community chat and bulletin board",
+                    "Integration with PAGOPLUX payment gateway",
+                    "Mobile application for Android and iOS"
+                ],
+                "technologies": ["Vue.js 3", "Node.js", "Flutter", "PostgreSQL", "Docker", "Azure"]
+            },
+            "gamerfest": {
+                "title": "GamerFest ESPE",
+                "description": "Web platform for managing video game tournaments at Universidad de las Fuerzas Armadas ESPE.",
+                "features": [
+                    "Player and team registration system",
+                    "Tournament and bracket management",
+                    "Real-time leaderboard",
+                    "Administrative panel for organizers"
+                ],
+                "technologies": ["Vue.js", "Laravel", "MySQL"]
+            },
+            "maki": {
+                "title": "MakiPOS - Point of Sale System",
+                "description": "Management system for point of sale with inventory control and order management.",
+                "features": [
+                    "Real-time point of sale control",
+                    "Inventory and product management",
+                    "Order authorization system",
+                    "Integration with mobile applications"
+                ],
+                "technologies": ["Laravel", "C#", "APIs", "JSON"]
             }
         }
     }
