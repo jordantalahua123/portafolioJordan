@@ -9,7 +9,7 @@
         "contact": "Contacto"
     },
     "sidebar": {
-        "jobTitle": "Desarrollador Full Stack",
+        "jobTitle": "Ingeniero de Software | Full Stack Developer",
         "phone": "Teléfono",
         "location": "Ubicación",
         "email": "Email",
@@ -24,11 +24,11 @@
     "home": {
         "greeting": "¡Hola! Soy",
         "roles": {
-            "role1": "Ingeniero de Software",
-            "role2": "Full Stack Developer",
-            "role3": "Especialista en DevOps"
+            "role1": "Ingeniero de Software Full Stack",
+            "role2": "Data Analyst & BI Specialist",
+            "role3": "Fundador & Emprendedor Tech"
         },
-        "description": "Desarrollador Full Stack apasionado por crear soluciones tecnológicas innovadoras, con experiencia en arquitecturas modernas, microservicios y optimización de rendimiento",
+        "description": "Ingeniero de Software con perfil híbrido: sólida experiencia en desarrollo Full Stack y una capacidad analítica experta en Datos, BI y automatización. Construyo productos digitales que impactan.",
         "viewProjects": "Ver mis proyectos",
         "contactMe": "Contáctame",
         "downloadCV": "Descargar CV",
@@ -51,10 +51,11 @@
             "backend": "Backend",
             "databases": "Bases de Datos",
             "devops": "DevOps",
-            "analytics": "Análisis de Datos"
+            "analytics": "Datos & BI",
+            "mobile": "Mobile"
         },
         "aboutMe": "Sobre mí",
-        "aboutDescription": "Ingeniero de software con más de 3 años de experiencia creando aplicaciones web y móviles modernas. Especializado en arquitecturas de microservicios, desarrollo full stack y soluciones cloud. He trabajado con tecnologías como Spring Boot, Angular, Node.js, Flutter y Azure, optimizando sistemas financieros, plataformas sociales y aplicaciones empresariales. Me apasiona resolver problemas complejos y convertir ideas en productos digitales que impacten positivamente."
+        "aboutDescription": "Ingeniero de Software con más de 4 años de experiencia y un perfil híbrido único: combino el poder del desarrollo Full Stack (Spring Boot, Angular, Node.js, Flutter) con dominio experto en Datos y BI (SQL Server, Power BI con DAX, Excel VBA). Fundador de Equasoft y desarrollador en el Ministerio de Desarrollo Humano. He optimizado sistemas financieros, construido plataformas sociales, liderado proyectos académicos y creado soluciones de inteligencia de negocios que convierten datos en decisiones. Me apasiona traducir problemas complejos en productos digitales que generan impacto real."
     },
     "placeholders": {
         "resumeSection": "Sección de Currículum",
@@ -67,6 +68,17 @@
         "title": "Habilidades Técnicas",
         "subtitle": "Interactúa con las esferas para explorar mis competencias",
         "instructions": "💡 Arrastra para rotar • Rueda del mouse para zoom • Pasa el cursor sobre las esferas",
+        "loading": "🤠 Cargando el Desierto... 🤠",
+        "initializing": "🤠 Inicializando... 🤠",
+        "westernTitle": "🤠 WILD WEST SKILLS TOWN 🤠",
+        "westernSubtitle": "Explora mis habilidades en un pueblo del viejo oeste",
+        "controls": {
+            "title": "CONTROLES",
+            "rotateCamera": "Click Izquierdo + Arrastrar = Rotar Cámara",
+            "moveCamera": "Click Derecho + Arrastrar = Mover Cámara",
+            "zoom": "Scroll = Zoom",
+            "moveCar": "W, A, S, D = Mover Auto"
+        },
         "categories": {
             "frontend": "🎯 Frontend",
             "backend": "⚙️ Backend", 
@@ -115,7 +127,30 @@
         "viewDetails": "Ver Detalles",
         "technologies": "Tecnologías",
         "responsibilities": "Responsabilidades",
+        "viewMore": "▼ Ver más detalles",
+        "viewLess": "▲ Ver menos",
+        "stats": {
+            "companies": "Empresas",
+            "years": "Años",
+            "projects": "Proyectos",
+            "technologies": "Tecnologías"
+        },
         "jobs": {
+            "ministerio": {
+                "title": "Analista de Base de Datos y Desarrollador Web",
+                "company": "Ministerio de Desarrollo Humano - Proyecto Jóvenes en Acción",
+                "location": "Quito",
+                "period": "Noviembre 2025 - Presente",
+                "description": "Perfil híbrido datos/desarrollo: dominio experto en SQL Server, Power BI con DAX y automatizaciones VBA, combinado con desarrollo de plataforma web en microservicios Spring Boot + Angular",
+                "responsibilities": [
+                    "Análisis y gestión de bases de datos en SQL Server con consultas complejas, stored procedures y optimización de rendimiento para reportería del proyecto Jóvenes en Acción",
+                    "Creación de dashboards y reportes ejecutivos en Power BI con lenguaje DAX avanzado, aplicando storytelling de datos para comunicar métricas clave a stakeholders",
+                    "Automatización de procesos repetitivos mediante macros en Excel (VBA), reduciendo tiempos operativos y eliminando errores manuales",
+                    "Desarrollo del frontend Angular bajo arquitectura Clean Code con patrón BLoC, garantizando código mantenible y escalable",
+                    "Participación en el backend Spring Boot con arquitectura de microservicios para la plataforma web integral del proyecto"
+                ],
+                "technologies": ["SQL Server", "Power BI", "DAX", "Excel VBA", "Spring Boot", "Angular", "Microservicios", "Clean Code", "BLoC"]
+            },
             "recycob": {
                 "title": "Analista Programador",
                 "company": "Recycob",
@@ -130,6 +165,21 @@
                     "Optimización de rendimiento de base de datos mediante la implementación de procedimientos almacenados eficientes"
                 ],
                 "technologies": ["Spring Boot", "Angular", "C#", "SQL Server", "Microservicios", "ETL"]
+            },
+            "chefhostschool": {
+                "title": "Desarrollador FullStack Web",
+                "company": "Escuela De Chefs Host School",
+                "location": "Latacunga",
+                "period": "Mayo 2025 - Agosto 2025",
+                "description": "Lideré el desarrollo de una plataforma tecnológica para automatizar y optimizar procesos académicos y administrativos clave de la institución",
+                "responsibilities": [
+                    "Lideré la implementación de una plataforma web integral para gestión académica: estudiantes, calificaciones, asistencias y control de uniformes",
+                    "Diseñé e implementé el sistema de gestión de estudiantes con módulos de inscripción, seguimiento académico y reportería",
+                    "Desarrollé el módulo de registro y cálculo automático de calificaciones, eliminando procesos manuales y reduciendo errores",
+                    "Integré sistema de control de asistencia y uniformes con notificaciones automáticas para tutores",
+                    "Mejoré la eficiencia operativa diaria de la escuela proporcionando soluciones digitales integradas"
+                ],
+                "technologies": ["Next.js", "Node.js", "TypeScript", "PostgreSQL", "Tailwind CSS"]
             },
             "seneca": {
                 "title": "Desarrollador Full Stack Móvil",
@@ -190,18 +240,20 @@
                 ],
                 "technologies": ["Odoo", "Python", "Redes", "Seguridad Informática"]
             },
-            "estelarsoft": {
-                "title": "Freelance Full Stack Developer Web | Móvil",
-                "company": "EstelarSoft",
-                "location": "Quito, Ecuador",
+            "equasoft": {
+                "title": "Fundador y Desarrollador Full Stack",
+                "company": "Equasoft",
+                "location": "Latacunga, Ecuador",
                 "period": "Marzo 2024 - Presente",
-                "description": "CEO de EstelarSoft - Desarrollo de software freelance",
+                "description": "Fundador de Equasoft: startup tecnológica con producto estrella Ecua Road, app nacional para notificaciones de incidentes viales en tiempo real. También desarrollo un POS y sistema contable nativo para móviles",
                 "responsibilities": [
-                    "Desarrollo de soluciones personalizadas para clientes",
-                    "Gestión de proyectos de desarrollo web y móvil",
-                    "Consultoría técnica y arquitectura de software"
+                    "Fundé y lidero Equasoft, startup tecnológica orientada a soluciones móviles innovadoras para el mercado ecuatoriano",
+                    "Desarrollé Ecua Road: aplicación móvil nacional para reporte y notificación de incidentes viales en tiempo real mediante chat, con integración de Google Maps y enrutamiento OSRM",
+                    "Arquitecté el backend en Node.js con WebSockets para comunicación en tiempo real entre usuarios y autoridades viales",
+                    "Lidero el desarrollo de un sistema de Punto de Venta (POS) y contabilidad nativo para móviles, enfocado en la ciudad de Latacunga",
+                    "Gestiono el ciclo completo de producto: ideación, desarrollo, despliegue y soporte a clientes"
                 ],
-                "technologies": ["Full Stack", "Web", "Móvil"]
+                "technologies": ["Flutter", "Node.js", "WebSockets", "Google Maps API", "OSRM", "TypeScript", "PostgreSQL"]
             },
             "fenix": {
                 "title": "Desarrollador de Software",
@@ -234,12 +286,38 @@
     },
     "works": {
         "title": "Proyectos Destacados",
+        "subtitle": "Proyectos destacados que demuestran mi experiencia en desarrollo full stack",
+        "mainFeatures": "Características Principales",
         "viewProject": "Ver Proyecto",
         "viewDemo": "Ver Demo",
         "viewCode": "Ver Código",
         "technologies": "Tecnologías",
         "description": "Descripción",
         "projects": {
+            "ecuaroad": {
+                "title": "Ecua Road - Notificaciones Viales",
+                "description": "Aplicación móvil nacional para reporte y notificación de incidentes viales en Ecuador mediante un sistema de chat en tiempo real, integrando mapas y enrutamiento inteligente.",
+                "features": [
+                    "Chat en tiempo real con WebSockets para comunicación instantánea entre usuarios y autoridades",
+                    "Integración con Google Maps para visualización de incidentes en mapa interactivo",
+                    "Enrutamiento OSRM para calcular rutas alternativas evitando incidentes reportados",
+                    "Sistema de reportes y categorización de incidentes viales",
+                    "Notificaciones push para alertas en tiempo real a conductores cercanos"
+                ],
+                "technologies": ["Flutter", "Node.js", "WebSockets", "Google Maps API", "OSRM", "TypeScript", "PostgreSQL"]
+            },
+            "chefhostschool": {
+                "title": "Chef Host School - Plataforma Académica",
+                "description": "Plataforma web integral para la Escuela De Chefs Host School, automatizando la gestión académica y administrativa: estudiantes, calificaciones, asistencias y uniformes.",
+                "features": [
+                    "Gestión completa de estudiantes: inscripción, perfiles y seguimiento académico",
+                    "Módulo de calificaciones con cálculo automático y generación de reportes",
+                    "Control de asistencia con notificaciones automáticas a tutores",
+                    "Sistema de control de uniformes e inventario",
+                    "Panel administrativo con dashboards y métricas de rendimiento institucional"
+                ],
+                "technologies": ["Next.js", "Node.js", "TypeScript", "PostgreSQL", "Tailwind CSS"]
+            },
             "pool": {
                 "title": "POOL - Red Social Universitaria",
                 "description": "Plataforma de red social para estudiantes universitarios con chat en tiempo real, comunidades, anuncios y notificaciones.",
@@ -286,6 +364,96 @@
                 ],
                 "technologies": ["Laravel", "C#", "APIs", "JSON"]
             }
+        }
+    },
+    "blogs": {
+        "title": "Blog Técnico",
+        "subtitle": "Reflexiones, tutoriales y lecciones aprendidas en el camino",
+        "readMore": "Leer más",
+        "minRead": "min de lectura",
+        "categories": {
+            "all": "Todos",
+            "backend": "Backend",
+            "mobile": "Mobile",
+            "data": "Data & BI",
+            "devops": "DevOps",
+            "startup": "Startup"
+        },
+        "posts": {
+            "microservices": {
+                "title": "Arquitectura de Microservicios con Spring Boot y Angular",
+                "category": "backend",
+                "date": "Mayo 2025",
+                "readTime": "8",
+                "description": "Cómo diseñé e implementé una arquitectura de microservicios financieros en Recycob: patrones de comunicación, manejo de transacciones distribuidas y lecciones aprendidas integrando Spring Boot con Angular en producción.",
+                "tags": ["Spring Boot", "Angular", "Microservicios", "SQL Server", "ETL"]
+            },
+            "ecuaroad": {
+                "title": "Construyendo Ecua Road: Lecciones de una Startup",
+                "category": "startup",
+                "date": "Marzo 2025",
+                "readTime": "6",
+                "description": "El journey de crear Equasoft y lanzar Ecua Road: desde la idea de un sistema de notificaciones viales en tiempo real hasta tener WebSockets en producción con Google Maps y OSRM. Errores, pivots y aprendizajes.",
+                "tags": ["Startup", "Flutter", "Node.js", "WebSockets", "Google Maps"]
+            },
+            "powerbi": {
+                "title": "Power BI y DAX: Storytelling con Datos para No Técnicos",
+                "category": "data",
+                "date": "Febrero 2025",
+                "readTime": "7",
+                "description": "La diferencia entre un dashboard que informa y uno que genera decisiones. Técnicas de DAX avanzado, modelado de datos en estrella y cómo presenté KPIs del proyecto Jóvenes en Acción para stakeholders del Ministerio.",
+                "tags": ["Power BI", "DAX", "SQL Server", "Excel VBA", "Business Intelligence"]
+            },
+            "flutter": {
+                "title": "Flutter + Clean Architecture + BLoC en Producción",
+                "category": "mobile",
+                "date": "Enero 2025",
+                "readTime": "10",
+                "description": "Por qué elegimos Clean Architecture con patrón BLoC para POOL y cómo escalamos la app universitaria a miles de usuarios. Estructura de capas, manejo de estados complejos y tests unitarios en Flutter.",
+                "tags": ["Flutter", "BLoC", "Clean Architecture", "Mobile", "Dart"]
+            },
+            "devops": {
+                "title": "DevOps con Docker, Azure y CI/CD Pipelines",
+                "category": "devops",
+                "date": "Noviembre 2024",
+                "readTime": "9",
+                "description": "De despliegue manual a entrega continua: cómo configuré Docker Compose, automaticé deployments en Azure con pipelines CI/CD y reduje los errores de producción en un 80% en el proyecto Ammeno.",
+                "tags": ["Docker", "Azure", "CI/CD", "DevOps", "Git"]
+            }
+        }
+    },
+    "contact": {
+        "title": "Hablemos",
+        "subtitle": "¿Tienes un proyecto en mente, una propuesta laboral o simplemente quieres conectar? Estoy disponible.",
+        "info": {
+            "title": "Información de Contacto",
+            "email": "Email",
+            "phone": "Teléfono",
+            "location": "Ubicación",
+            "availability": "Disponibilidad",
+            "availabilityValue": "Abierto a propuestas"
+        },
+        "social": {
+            "title": "Redes Sociales",
+            "github": "GitHub",
+            "linkedin": "LinkedIn",
+            "twitter": "Twitter",
+            "instagram": "Instagram"
+        },
+        "form": {
+            "title": "Envíame un Mensaje",
+            "name": "Nombre completo",
+            "namePlaceholder": "¿Cómo te llamas?",
+            "email": "Email",
+            "emailPlaceholder": "tu@email.com",
+            "subject": "Asunto",
+            "subjectPlaceholder": "¿En qué puedo ayudarte?",
+            "message": "Mensaje",
+            "messagePlaceholder": "Cuéntame sobre tu proyecto o propuesta...",
+            "send": "Enviar Mensaje",
+            "sending": "Enviando...",
+            "success": "¡Mensaje enviado! Te respondo pronto.",
+            "error": "Error al enviar. Inténtalo por email directamente."
         }
     }
 }

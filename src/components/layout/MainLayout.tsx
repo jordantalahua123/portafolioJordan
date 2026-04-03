@@ -5,6 +5,12 @@ import { theme } from '@/lib/theme'
 import Sidebar from './Sidebar'
 import Navbar from './Navbar'
 import { usePathname } from 'next/navigation'
+import dynamic from 'next/dynamic'
+
+const ParticleBackground = dynamic(() => import('@/components/3d/ParticleBackground'), {
+    ssr: false,
+    loading: () => null
+})
 
 interface MainLayoutProps {
     children: React.ReactNode
@@ -15,10 +21,14 @@ export default function MainLayout({ children }: MainLayoutProps) {
     const colors = theme[currentTheme === 'dark' ? 'dark' : 'light']
     const pathname = usePathname()
     
+    // Skills page has its own 3D background — skip particles there
+    const isSkillsPage = pathname === '/skills'
+
     // Layout normal para todas las páginas
     return (
         <div className="min-h-screen transition-colors" style={{ backgroundColor: colors.background, color: colors.foreground }}>
-            <div className="h-screen flex overflow-hidden">
+            {!isSkillsPage && <ParticleBackground />}
+            <div className="h-screen flex overflow-hidden relative" style={{ zIndex: 1 }}>
                 {/* Sidebar - Fijo en altura completa, responsive en ancho */}
                 <aside className="hidden lg:flex lg:flex-col w-[15%] min-w-[300px] max-w-[400px] shadow-lg" style={{ backgroundColor: colors.muted }}>
                     <Sidebar />

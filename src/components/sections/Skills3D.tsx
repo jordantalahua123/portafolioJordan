@@ -23,15 +23,15 @@ const DynamicScene = dynamic(() => import('@/components/sections/skills/Scene'),
         
         return (
             <div className="w-full h-full flex items-center justify-center"
-                style={{ 
+                style={{
                     background: `linear-gradient(180deg, ${colors.sky.primary} 0%, ${colors.sky.secondary} 50%, ${colors.sky.horizon} 100%)`
                 }}
             >
                 <div className="text-center">
-                    <h3 className={`text-2xl font-bold mb-4 ${currentTheme === 'dark' ? 'text-amber-200' : 'text-amber-800'}`}>
+                    <h3 className="text-2xl font-bold mb-4" style={{ color: colors.ui.loading }}>
                         🤠 Cargando el Desierto... 🤠
                     </h3>
-                    <div className={`animate-spin rounded-full h-16 w-16 border-b-2 mx-auto ${currentTheme === 'dark' ? 'border-amber-200' : 'border-amber-700'}`}></div>
+                    <div className="animate-spin rounded-full h-16 w-16 border-b-2 mx-auto" style={{ borderColor: colors.ui.border }}></div>
                 </div>
             </div>
         )
@@ -72,25 +72,15 @@ export default function Skills3D() {
     const theme = currentTheme === 'dark' ? 'dark' : 'light'
     const colors = sceneColors[theme]
     
-    // Estilos adaptados al tema
-    const headerStyles = {
-        title: theme === 'dark' 
-            ? "text-2xl md:text-3xl font-bold text-center mb-2 text-amber-400" 
-            : "text-2xl md:text-3xl font-bold text-center mb-2 text-amber-700",
-        subtitle: theme === 'dark'
-            ? "text-sm md:text-base text-center opacity-80 mb-4 text-amber-100"
-            : "text-sm md:text-base text-center opacity-80 mb-4 text-amber-800"
-    }
-
     if (!mounted) {
         return (
             <div className="w-full h-full flex items-center justify-center"
-                style={{ 
+                style={{
                     background: `linear-gradient(180deg, ${colors.sky.primary} 0%, ${colors.sky.secondary} 50%, ${colors.sky.horizon} 100%)`
                 }}
             >
                 <div className="text-center">
-                    <h3 className={`text-2xl font-bold mb-4 ${theme === 'dark' ? 'text-amber-200' : 'text-amber-800'}`}>
+                    <h3 className="text-2xl font-bold mb-4" style={{ color: colors.ui.loading }}>
                         🤠 Inicializando... 🤠
                     </h3>
                 </div>
@@ -109,10 +99,12 @@ export default function Skills3D() {
         >
             {/* Header con información del viejo oeste */}
             <div className="absolute top-0 left-0 right-0 z-10 p-4 md:p-6">
-                <h2 className={headerStyles.title} style={{ fontFamily: 'serif' }}>
+                <h2 className="text-2xl md:text-3xl font-bold text-center mb-2"
+                    style={{ fontFamily: 'serif', color: colors.ui.title }}>
                     🤠 WILD WEST SKILLS TOWN 🤠
                 </h2>
-                <p className={headerStyles.subtitle}>
+                <p className="text-sm md:text-base text-center opacity-80 mb-4"
+                    style={{ color: colors.ui.subtitle }}>
                     Explora mis habilidades en un pueblo del viejo oeste
                 </p>
             </div>

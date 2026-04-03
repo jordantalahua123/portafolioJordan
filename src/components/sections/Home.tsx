@@ -3,13 +3,13 @@
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useSpring, animated } from '@react-spring/web'
-import { 
+import {
     FaReact, FaVuejs, FaNodeJs, FaDocker, FaGithub, FaLinkedin,
-    FaDatabase, FaCloud, FaCode 
+    FaDatabase, FaCloud, FaCode, FaMobileAlt
 } from 'react-icons/fa'
-import { 
-    SiNextdotjs, SiTypescript, SiTailwindcss, SiExpress, 
-    SiMongodb, SiPostgresql, SiJenkins 
+import {
+    SiNextdotjs, SiTypescript, SiTailwindcss, SiExpress,
+    SiMongodb, SiPostgresql, SiJenkins, SiAngular, SiFlutter
 } from 'react-icons/si'
 import { useLanguage } from '@/lib/context/LanguageContext'
 import { useTheme } from 'next-themes'
@@ -26,7 +26,7 @@ export default function Home() {
     // Animación para las métricas
     const [isVisible, setIsVisible] = useState(false)
     const numberAnimation = useSpring({
-        number: isVisible ? 3 : 0,
+        number: isVisible ? 4 : 0,
         from: { number: 0 },
         config: { duration: 2000 }
     })
@@ -40,10 +40,10 @@ export default function Home() {
     }, [roles.length])
 
     const metrics = [
-        { number: 3, label: t('home.metrics.experience'), suffix: '+' },
-        { number: 15, label: t('home.metrics.projects'), suffix: '+' },
+        { number: 4, label: t('home.metrics.experience'), suffix: '+' },
+        { number: 20, label: t('home.metrics.projects'), suffix: '+' },
         { number: 4, label: t('home.metrics.certifications'), suffix: '+' },
-        { number: 20, label: t('home.metrics.technologies'), suffix: '+' }
+        { number: 25, label: t('home.metrics.technologies'), suffix: '+' }
     ]
 
     const technologies = {
@@ -51,7 +51,7 @@ export default function Home() {
             { icon: FaReact, name: 'React' },
             { icon: SiNextdotjs, name: 'Next.js' },
             { icon: FaVuejs, name: 'Vue.js' },
-            { icon: SiTypescript, name: 'TypeScript' },
+            { icon: SiAngular, name: 'Angular' },
             { icon: SiTailwindcss, name: 'Tailwind' }
         ],
         backend: [
@@ -71,12 +71,19 @@ export default function Home() {
             { icon: FaDocker, name: 'Docker' },
             { icon: FaCloud, name: 'Azure' },
             { icon: SiJenkins, name: 'Jenkins' },
-            { icon: FaCloud, name: 'Kubernetes' }
+            { icon: FaCloud, name: 'AWS' }
         ],
         analytics: [
             { icon: FaDatabase, name: 'Power BI' },
-            { icon: FaDatabase, name: 'ETL' },
-            { icon: FaDatabase, name: 'BI' }
+            { icon: FaDatabase, name: 'DAX' },
+            { icon: FaCode, name: 'Excel VBA' },
+            { icon: FaDatabase, name: 'ETL' }
+        ],
+        mobile: [
+            { icon: SiFlutter, name: 'Flutter' },
+            { icon: FaMobileAlt, name: 'Android' },
+            { icon: FaMobileAlt, name: 'iOS' },
+            { icon: FaCode, name: 'BLoC' }
         ]
     }
 
@@ -141,8 +148,11 @@ export default function Home() {
                                 className="px-6 py-3 rounded-xl font-semibold hover:opacity-90 transition-opacity shadow-lg">
                                 {t("home.viewProjects")}
                             </Link>
-                            <Link href="/contact" style={{ borderColor: colors.background, color: colors.background }} 
-                                className="border-2 px-6 py-3 rounded-xl font-semibold hover:bg-white/10 transition-colors">
+                            <Link href="/contact"
+                                style={{ borderColor: colors.background, color: colors.background }}
+                                className="border-2 px-6 py-3 rounded-xl font-semibold transition-colors"
+                                onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = `${colors.background}1A`)}
+                                onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'transparent')}>
                                 {t("home.contactMe")}
                             </Link>
                         </motion.div>
@@ -157,14 +167,18 @@ export default function Home() {
                 transition={{ delay: 0.3, duration: 0.6 }}
                 className="grid grid-cols-2 md:grid-cols-4 gap-6"
             >
-                {metrics.map((metric) => (
+                {metrics.map((metric, i) => (
                     <div
                         key={metric.label}
-                        style={{ backgroundColor: colors.muted }}
-                        className="rounded-2xl p-6 text-center"
+                        style={{
+                            backgroundColor: colors.muted,
+                            border: `1px solid ${colors.primary}30`,
+                            animation: `fadeInUp 0.5s ease ${i * 0.1}s both`
+                        }}
+                        className="rounded-2xl p-6 text-center hover:shadow-lg transition-shadow"
                     >
                         <animated.h3 className="text-3xl lg:text-4xl font-bold mb-2" style={{ color: colors.primary }}>
-                            {numberAnimation.number.to(n => Math.floor(n * (metric.number / 3)) + metric.suffix)}
+                            {numberAnimation.number.to(n => Math.floor(n * (metric.number / 4)) + metric.suffix)}
                         </animated.h3>
                         <p className="text-sm opacity-80">{metric.label}</p>
                     </div>
@@ -179,7 +193,7 @@ export default function Home() {
                 className="space-y-8"
             >
                 <h2 className="text-2xl font-bold text-center mb-8">{t("home.technologies.title")}</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
                     {Object.entries(technologies).map(([category, techs], i) => (
                         <motion.div
                             key={category}

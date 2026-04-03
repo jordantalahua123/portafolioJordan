@@ -6,6 +6,28 @@ import { useTheme } from 'next-themes'
 import { theme } from '@/lib/theme'
 import { FaBriefcase, FaMapMarkerAlt, FaCalendarAlt, FaCode } from 'react-icons/fa'
 import { useState } from 'react'
+import { useTilt } from '@/hooks/useTilt'
+
+function TiltCard({ children, className, style, onClick }: {
+    children: React.ReactNode
+    className?: string
+    style?: React.CSSProperties
+    onClick?: () => void
+}) {
+    const { ref, handleMouseMove, handleMouseLeave } = useTilt({ maxTilt: 5, scale: 1.02 })
+    return (
+        <div
+            ref={ref}
+            className={className}
+            style={{ ...style, transformStyle: 'preserve-3d', willChange: 'transform' }}
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
+            onClick={onClick}
+        >
+            {children}
+        </div>
+    )
+}
 
 export default function Experience() {
     const { t } = useLanguage()
@@ -15,9 +37,19 @@ export default function Experience() {
 
     const jobs = [
         {
+            id: 'ministerio',
+            icon: '📊',
+            color: '#0369a1'
+        },
+        {
             id: 'recycob',
             icon: '💳',
             color: '#3b82f6'
+        },
+        {
+            id: 'chefhostschool',
+            icon: '👨‍🍳',
+            color: '#16a34a'
         },
         {
             id: 'seneca',
@@ -30,6 +62,11 @@ export default function Experience() {
             color: '#ec4899'
         },
         {
+            id: 'equasoft',
+            icon: '🚀',
+            color: '#6366f1'
+        },
+        {
             id: 'kuntursoft',
             icon: '⚙️',
             color: '#f59e0b'
@@ -38,11 +75,6 @@ export default function Experience() {
             id: 'epmhv',
             icon: '🏛️',
             color: '#10b981'
-        },
-        {
-            id: 'estelarsoft',
-            icon: '🚀',
-            color: '#6366f1'
         },
         {
             id: 'fenix',
@@ -116,14 +148,13 @@ export default function Experience() {
                                 />
 
                                 {/* Card del trabajo */}
-                                <div 
-                                    className="md:ml-20 cursor-pointer"
+                                <TiltCard
+                                    className="md:ml-20 cursor-pointer rounded-2xl"
                                     onClick={() => toggleJob(job.id)}
                                 >
                                     <motion.div
                                         style={{ backgroundColor: colors.muted }}
-                                        className="rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 relative overflow-hidden group"
-                                        whileHover={{ scale: 1.02 }}
+                                        className="rounded-2xl p-6 hover:shadow-2xl transition-shadow duration-300 relative overflow-hidden group"
                                     >
                                         {/* Decoración de fondo */}
                                         <div 
@@ -208,15 +239,15 @@ export default function Experience() {
                                             </motion.div>
 
                                             {/* Botón para expandir/colapsar */}
-                                            <button 
+                                            <button
                                                 className="mt-4 text-sm font-medium flex items-center gap-2 hover:opacity-70 transition-opacity"
                                                 style={{ color: job.color }}
                                             >
-                                                {isExpanded ? '▲ Ver menos' : '▼ Ver más detalles'}
+                                                {isExpanded ? t('experience.viewLess') : t('experience.viewMore')}
                                             </button>
                                         </div>
                                     </motion.div>
-                                </div>
+                                </TiltCard>
                             </motion.div>
                         )
                     })}
@@ -231,10 +262,10 @@ export default function Experience() {
                 className="grid grid-cols-2 md:grid-cols-4 gap-4"
             >
                 {[
-                    { label: 'Empresas', value: '8', icon: '🏢' },
-                    { label: 'Años', value: '3+', icon: '📅' },
-                    { label: 'Proyectos', value: '15+', icon: '🚀' },
-                    { label: 'Tecnologías', value: '20+', icon: '💻' }
+                    { label: t('experience.stats.companies'), value: '10', icon: '🏢' },
+                    { label: t('experience.stats.years'), value: '4+', icon: '📅' },
+                    { label: t('experience.stats.projects'), value: '20+', icon: '🚀' },
+                    { label: t('experience.stats.technologies'), value: '25+', icon: '💻' }
                 ].map((stat, index) => (
                     <div
                         key={stat.label}

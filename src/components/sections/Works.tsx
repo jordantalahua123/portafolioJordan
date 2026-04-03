@@ -7,6 +7,28 @@ import { theme } from '@/lib/theme'
 import { FaExternalLinkAlt, FaGooglePlay, FaGlobe, FaCode } from 'react-icons/fa'
 import { useState } from 'react'
 import Image from 'next/image'
+import { useTilt } from '@/hooks/useTilt'
+
+function TiltProjectCard({ children, className, style, onClick }: {
+    children: React.ReactNode
+    className?: string
+    style?: React.CSSProperties
+    onClick?: () => void
+}) {
+    const { ref, handleMouseMove, handleMouseLeave } = useTilt({ maxTilt: 6, scale: 1.03 })
+    return (
+        <div
+            ref={ref}
+            className={className}
+            style={{ ...style, transformStyle: 'preserve-3d', willChange: 'transform' }}
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
+            onClick={onClick}
+        >
+            {children}
+        </div>
+    )
+}
 
 export default function Works() {
     const { t } = useLanguage()
@@ -16,14 +38,42 @@ export default function Works() {
 
     const projects = [
         {
+            id: 'ecuaroad',
+            icon: '🚗',
+            color: '#0ea5e9',
+            gradient: 'from-sky-500 to-blue-600',
+            image: '/projects/ecuaroad.jpg',
+            links: [
+                {
+                    type: 'web',
+                    url: 'https://equasoft.ec',
+                    label: 'Equasoft'
+                }
+            ]
+        },
+        {
+            id: 'chefhostschool',
+            icon: '👨‍🍳',
+            color: '#16a34a',
+            gradient: 'from-green-500 to-emerald-600',
+            image: '/projects/chefhostschool.jpg',
+            links: [
+                {
+                    type: 'web',
+                    url: 'https://chefhostschool.com/sign-in',
+                    label: 'Ver Sitio'
+                }
+            ]
+        },
+        {
             id: 'pool',
             icon: '🎓',
             color: '#ec4899',
             gradient: 'from-pink-500 to-purple-600',
             image: '/projects/pool.jpg',
             links: [
-                { 
-                    type: 'playstore', 
+                {
+                    type: 'playstore',
                     url: 'https://play.google.com/store/apps/details?id=com.poolcommunity.PoolApp&hl=es_EC',
                     label: 'Google Play'
                 }
@@ -36,13 +86,13 @@ export default function Works() {
             gradient: 'from-purple-500 to-indigo-600',
             image: '/projects/ammeno.jpg',
             links: [
-                { 
-                    type: 'playstore', 
+                {
+                    type: 'playstore',
                     url: 'https://play.google.com/store/apps/details?id=com.seneca.ammeno_app',
                     label: 'Google Play'
                 },
-                { 
-                    type: 'web', 
+                {
+                    type: 'web',
                     url: 'https://www.ammeno.app/',
                     label: 'Sitio Web'
                 }
@@ -55,8 +105,8 @@ export default function Works() {
             gradient: 'from-teal-500 to-cyan-600',
             image: '/projects/gamerfest.jpg',
             links: [
-                { 
-                    type: 'web', 
+                {
+                    type: 'web',
                     url: 'https://espelgamerfest.com/',
                     label: 'Ver Sitio'
                 }
@@ -69,8 +119,8 @@ export default function Works() {
             gradient: 'from-amber-500 to-orange-600',
             image: '/projects/maki.jpg',
             links: [
-                { 
-                    type: 'web', 
+                {
+                    type: 'web',
                     url: 'https://fenixcorp.fenixerp.com/maki-administrador',
                     label: 'Ver Proyecto'
                 }
@@ -97,12 +147,12 @@ export default function Works() {
             >
                 <h1 className="text-4xl lg:text-5xl font-bold mb-4">{t('works.title')}</h1>
                 <p className="text-lg opacity-70 max-w-2xl mx-auto">
-                    Proyectos destacados que demuestran mi experiencia en desarrollo full stack
+                    {t('works.subtitle')}
                 </p>
             </motion.div>
 
             {/* Grid de proyectos */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {projects.map((project, index) => {
                     const projectTitle = t(`works.projects.${project.id}.title`)
                     const projectDescription = t(`works.projects.${project.id}.description`)
@@ -115,9 +165,9 @@ export default function Works() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.1, duration: 0.6 }}
                         >
-                            <div 
+                            <TiltProjectCard
                                 style={{ backgroundColor: colors.muted }}
-                                className="rounded-3xl overflow-hidden group hover:shadow-2xl transition-all duration-300 cursor-pointer"
+                                className="rounded-3xl overflow-hidden group hover:shadow-2xl transition-shadow duration-300 cursor-pointer"
                                 onClick={() => openModal(project.id)}
                             >
                                 {/* Imagen del proyecto */}
@@ -179,7 +229,7 @@ export default function Works() {
                                         ))}
                                     </div>
                                 </div>
-                            </div>
+                            </TiltProjectCard>
                         </motion.div>
                     )
                 })}
@@ -232,7 +282,7 @@ export default function Works() {
                                     <div className="mb-6">
                                         <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
                                             <FaCode style={{ color: project.color }} />
-                                            Características Principales
+                                            {t('works.mainFeatures')}
                                         </h3>
                                         <ul className="space-y-2">
                                             {Array.isArray(projectFeatures) && projectFeatures.map((feature: string, idx: number) => (

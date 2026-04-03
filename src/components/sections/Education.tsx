@@ -99,8 +99,21 @@ export default function Education() {
                             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-secondary/10 to-transparent rounded-full blur-2xl"></div>
                             <div className="relative z-10">
                                 <div className="flex justify-between items-start mb-4">
-                                    <h3 className="text-lg font-bold flex-1">{cert.title}</h3>
-                                    <span className="text-sm opacity-60">{cert.date}</span>
+                                    <div className="flex items-center gap-3">
+                                        {/* 3D rotating badge */}
+                                        <div
+                                            className="w-10 h-10 rounded-full flex items-center justify-center text-xl flex-shrink-0"
+                                            style={{
+                                                background: `linear-gradient(135deg, ${colors.secondary}, ${colors.accent})`,
+                                                animation: 'spin3d 6s linear infinite',
+                                                transformStyle: 'preserve-3d'
+                                            }}
+                                        >
+                                            🏅
+                                        </div>
+                                        <h3 className="text-lg font-bold flex-1">{cert.title}</h3>
+                                    </div>
+                                    <span className="text-sm opacity-60 ml-2 flex-shrink-0">{cert.date}</span>
                                 </div>
                                 <p className="text-sm opacity-80 line-clamp-4 group-hover:line-clamp-none transition-all">
                                     {cert.description}

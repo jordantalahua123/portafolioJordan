@@ -24,3 +24,22 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* 3D badge spin animation for Education certificates */
+@keyframes spin3d {
+  0%   { transform: perspective(200px) rotateY(0deg); }
+  50%  { transform: perspective(200px) rotateY(180deg); }
+  100% { transform: perspective(200px) rotateY(360deg); }
+}
+
+/* Smooth tilt card reset */
+.tilt-card {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* Staggered fade-in for tech grid items */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

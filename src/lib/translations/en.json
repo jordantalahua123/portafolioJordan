@@ -9,7 +9,7 @@
         "contact": "Contact"
     },
     "sidebar": {
-        "jobTitle": "Full Stack Developer",
+        "jobTitle": "Software Engineer | Full Stack Developer",
         "phone": "Phone",
         "location": "Location",
         "email": "Email",
@@ -24,11 +24,11 @@
     "home": {
         "greeting": "Hello! I'm",
         "roles": {
-            "role1": "Software Engineer",
-            "role2": "Full Stack Developer",
-            "role3": "DevOps Specialist"
+            "role1": "Full Stack Software Engineer",
+            "role2": "Data Analyst & BI Specialist",
+            "role3": "Tech Founder & Entrepreneur"
         },
-        "description": "Full Stack Developer passionate about creating innovative technological solutions, with experience in modern architectures, microservices and performance optimization",
+        "description": "Software Engineer with a hybrid profile: solid Full Stack development experience combined with expert analytical skills in Data, BI and automation. I build digital products that create impact.",
         "viewProjects": "View my projects",
         "contactMe": "Contact me",
         "downloadCV": "Download CV",
@@ -51,10 +51,11 @@
             "backend": "Backend",
             "databases": "Databases",
             "devops": "DevOps",
-            "analytics": "Data Analytics"
+            "analytics": "Data & BI",
+            "mobile": "Mobile"
         },
         "aboutMe": "About me",
-        "aboutDescription": "Software engineer with over 3 years of experience creating modern web and mobile applications. Specialized in microservices architectures, full stack development and cloud solutions. I've worked with technologies like Spring Boot, Angular, Node.js, Flutter and Azure, optimizing financial systems, social platforms and enterprise applications. I'm passionate about solving complex problems and turning ideas into digital products that make a positive impact."
+        "aboutDescription": "Software Engineer with 4+ years of experience and a unique hybrid profile: combining the power of Full Stack development (Spring Boot, Angular, Node.js, Flutter) with expert command of Data & BI (SQL Server, Power BI with DAX, Excel VBA). Founder of Equasoft and developer at the Ministry of Human Development. I've optimized financial systems, built social platforms, led academic projects, and created business intelligence solutions that turn data into decisions. I'm passionate about translating complex problems into digital products that generate real impact."
     },
     "placeholders": {
         "resumeSection": "Resume Section",
@@ -67,6 +68,17 @@
         "title": "Technical Skills",
         "subtitle": "Interact with the spheres to explore my competencies",
         "instructions": "💡 Drag to rotate • Mouse wheel to zoom • Hover over spheres",
+        "loading": "🤠 Loading the Desert... 🤠",
+        "initializing": "🤠 Initializing... 🤠",
+        "westernTitle": "🤠 WILD WEST SKILLS TOWN 🤠",
+        "westernSubtitle": "Explore my skills in a wild west town",
+        "controls": {
+            "title": "CONTROLS",
+            "rotateCamera": "Left Click + Drag = Rotate Camera",
+            "moveCamera": "Right Click + Drag = Move Camera",
+            "zoom": "Scroll = Zoom",
+            "moveCar": "W, A, S, D = Move Car"
+        },
         "categories": {
             "frontend": "🎯 Frontend",
             "backend": "⚙️ Backend",
@@ -115,7 +127,30 @@
         "viewDetails": "View Details",
         "technologies": "Technologies",
         "responsibilities": "Responsibilities",
+        "viewMore": "▼ View more details",
+        "viewLess": "▲ View less",
+        "stats": {
+            "companies": "Companies",
+            "years": "Years",
+            "projects": "Projects",
+            "technologies": "Technologies"
+        },
         "jobs": {
+            "ministerio": {
+                "title": "Database Analyst and Web Developer",
+                "company": "Ministry of Human Development - Jóvenes en Acción Project",
+                "location": "Quito",
+                "period": "November 2025 - Present",
+                "description": "Hybrid data/development profile: expert command of SQL Server, Power BI with DAX and VBA automation, combined with microservices Spring Boot + Angular web platform development",
+                "responsibilities": [
+                    "Database analysis and management in SQL Server with complex queries, stored procedures and performance optimization for Jóvenes en Acción project reporting",
+                    "Creation of executive dashboards and reports in Power BI with advanced DAX language, applying data storytelling to communicate key metrics to stakeholders",
+                    "Automation of repetitive processes through Excel macros (VBA), reducing operational times and eliminating manual errors",
+                    "Angular frontend development under Clean Code architecture with BLoC pattern, ensuring maintainable and scalable code",
+                    "Participation in Spring Boot backend with microservices architecture for the project's comprehensive web platform"
+                ],
+                "technologies": ["SQL Server", "Power BI", "DAX", "Excel VBA", "Spring Boot", "Angular", "Microservices", "Clean Code", "BLoC"]
+            },
             "recycob": {
                 "title": "Programmer Analyst",
                 "company": "Recycob",
@@ -130,6 +165,21 @@
                     "Database performance optimization through efficient stored procedures implementation"
                 ],
                 "technologies": ["Spring Boot", "Angular", "C#", "SQL Server", "Microservices", "ETL"]
+            },
+            "chefhostschool": {
+                "title": "Full Stack Web Developer",
+                "company": "Chef Host School",
+                "location": "Latacunga",
+                "period": "May 2025 - August 2025",
+                "description": "Led the development of a technological platform to automate and optimize key academic and administrative processes for the institution",
+                "responsibilities": [
+                    "Led the implementation of a comprehensive web platform for academic management: students, grades, attendance and uniform tracking",
+                    "Designed and implemented the student management system with enrollment modules, academic tracking and reporting",
+                    "Developed the grade recording and automatic calculation module, eliminating manual processes and reducing errors",
+                    "Integrated attendance and uniform control system with automatic notifications for guardians",
+                    "Improved the school's daily operational efficiency by providing integrated digital solutions"
+                ],
+                "technologies": ["Next.js", "Node.js", "TypeScript", "PostgreSQL", "Tailwind CSS"]
             },
             "seneca": {
                 "title": "Full Stack Mobile Developer",
@@ -190,18 +240,20 @@
                 ],
                 "technologies": ["Odoo", "Python", "Networks", "Cybersecurity"]
             },
-            "estelarsoft": {
-                "title": "Freelance Full Stack Developer Web | Mobile",
-                "company": "EstelarSoft",
-                "location": "Quito, Ecuador",
+            "equasoft": {
+                "title": "Founder and Full Stack Developer",
+                "company": "Equasoft",
+                "location": "Latacunga, Ecuador",
                 "period": "March 2024 - Present",
-                "description": "CEO of EstelarSoft - Freelance software development",
+                "description": "Founded Equasoft, a tech startup with flagship product Ecua Road — a national app for real-time road incident notifications. Also developing a native mobile POS and accounting system",
                 "responsibilities": [
-                    "Development of customized solutions for clients",
-                    "Web and mobile development project management",
-                    "Technical consulting and software architecture"
+                    "Founded and lead Equasoft, a tech startup focused on innovative mobile solutions for the Ecuadorian market",
+                    "Developed Ecua Road: a national mobile app for real-time road incident reporting and notification via chat, with Google Maps and OSRM routing integration",
+                    "Architected the Node.js backend with WebSockets for real-time communication between users and road authorities",
+                    "Leading development of a native mobile Point of Sale (POS) and accounting system, focused on the city of Latacunga",
+                    "Managing the full product lifecycle: ideation, development, deployment and client support"
                 ],
-                "technologies": ["Full Stack", "Web", "Mobile"]
+                "technologies": ["Flutter", "Node.js", "WebSockets", "Google Maps API", "OSRM", "TypeScript", "PostgreSQL"]
             },
             "fenix": {
                 "title": "Software Developer",
@@ -234,12 +286,38 @@
     },
     "works": {
         "title": "Featured Projects",
+        "subtitle": "Featured projects that demonstrate my full stack development experience",
+        "mainFeatures": "Main Features",
         "viewProject": "View Project",
         "viewDemo": "View Demo",
         "viewCode": "View Code",
         "technologies": "Technologies",
         "description": "Description",
         "projects": {
+            "ecuaroad": {
+                "title": "Ecua Road - Road Incident Alerts",
+                "description": "National mobile app for reporting and notifying road incidents in Ecuador through a real-time chat system, integrating maps and intelligent routing.",
+                "features": [
+                    "Real-time chat with WebSockets for instant communication between users and authorities",
+                    "Google Maps integration for incident visualization on an interactive map",
+                    "OSRM routing to calculate alternative routes avoiding reported incidents",
+                    "Incident reporting and categorization system",
+                    "Push notifications for real-time alerts to nearby drivers"
+                ],
+                "technologies": ["Flutter", "Node.js", "WebSockets", "Google Maps API", "OSRM", "TypeScript", "PostgreSQL"]
+            },
+            "chefhostschool": {
+                "title": "Chef Host School - Academic Platform",
+                "description": "Comprehensive web platform for Chef Host School, automating academic and administrative management: students, grades, attendance and uniforms.",
+                "features": [
+                    "Complete student management: enrollment, profiles and academic tracking",
+                    "Grade module with automatic calculation and report generation",
+                    "Attendance tracking with automatic notifications to guardians",
+                    "Uniform and inventory control system",
+                    "Administrative panel with dashboards and institutional performance metrics"
+                ],
+                "technologies": ["Next.js", "Node.js", "TypeScript", "PostgreSQL", "Tailwind CSS"]
+            },
             "pool": {
                 "title": "POOL - University Social Network",
                 "description": "Social network platform for university students with real-time chat, communities, announcements and notifications.",
@@ -286,6 +364,96 @@
                 ],
                 "technologies": ["Laravel", "C#", "APIs", "JSON"]
             }
+        }
+    },
+    "blogs": {
+        "title": "Tech Blog",
+        "subtitle": "Reflections, tutorials and lessons learned along the way",
+        "readMore": "Read more",
+        "minRead": "min read",
+        "categories": {
+            "all": "All",
+            "backend": "Backend",
+            "mobile": "Mobile",
+            "data": "Data & BI",
+            "devops": "DevOps",
+            "startup": "Startup"
+        },
+        "posts": {
+            "microservices": {
+                "title": "Microservices Architecture with Spring Boot and Angular",
+                "category": "backend",
+                "date": "May 2025",
+                "readTime": "8",
+                "description": "How I designed and implemented a financial microservices architecture at Recycob: communication patterns, distributed transaction handling, and lessons learned integrating Spring Boot with Angular in production.",
+                "tags": ["Spring Boot", "Angular", "Microservices", "SQL Server", "ETL"]
+            },
+            "ecuaroad": {
+                "title": "Building Ecua Road: Lessons from a Startup",
+                "category": "startup",
+                "date": "March 2025",
+                "readTime": "6",
+                "description": "The journey of creating Equasoft and launching Ecua Road: from the idea of a real-time road incident notification system to having WebSockets in production with Google Maps and OSRM. Mistakes, pivots and learnings.",
+                "tags": ["Startup", "Flutter", "Node.js", "WebSockets", "Google Maps"]
+            },
+            "powerbi": {
+                "title": "Power BI and DAX: Data Storytelling for Non-Technical Audiences",
+                "category": "data",
+                "date": "February 2025",
+                "readTime": "7",
+                "description": "The difference between a dashboard that informs and one that drives decisions. Advanced DAX techniques, star schema data modeling, and how I presented KPIs for the Jóvenes en Acción project to Ministry stakeholders.",
+                "tags": ["Power BI", "DAX", "SQL Server", "Excel VBA", "Business Intelligence"]
+            },
+            "flutter": {
+                "title": "Flutter + Clean Architecture + BLoC in Production",
+                "category": "mobile",
+                "date": "January 2025",
+                "readTime": "10",
+                "description": "Why we chose Clean Architecture with the BLoC pattern for POOL and how we scaled the university app to thousands of users. Layer structure, complex state management and unit tests in Flutter.",
+                "tags": ["Flutter", "BLoC", "Clean Architecture", "Mobile", "Dart"]
+            },
+            "devops": {
+                "title": "DevOps with Docker, Azure and CI/CD Pipelines",
+                "category": "devops",
+                "date": "November 2024",
+                "readTime": "9",
+                "description": "From manual deployment to continuous delivery: how I configured Docker Compose, automated deployments on Azure with CI/CD pipelines and reduced production errors by 80% on the Ammeno project.",
+                "tags": ["Docker", "Azure", "CI/CD", "DevOps", "Git"]
+            }
+        }
+    },
+    "contact": {
+        "title": "Let's Talk",
+        "subtitle": "Do you have a project in mind, a job proposal or just want to connect? I'm available.",
+        "info": {
+            "title": "Contact Information",
+            "email": "Email",
+            "phone": "Phone",
+            "location": "Location",
+            "availability": "Availability",
+            "availabilityValue": "Open to proposals"
+        },
+        "social": {
+            "title": "Social Media",
+            "github": "GitHub",
+            "linkedin": "LinkedIn",
+            "twitter": "Twitter",
+            "instagram": "Instagram"
+        },
+        "form": {
+            "title": "Send me a Message",
+            "name": "Full name",
+            "namePlaceholder": "What's your name?",
+            "email": "Email",
+            "emailPlaceholder": "your@email.com",
+            "subject": "Subject",
+            "subjectPlaceholder": "How can I help you?",
+            "message": "Message",
+            "messagePlaceholder": "Tell me about your project or proposal...",
+            "send": "Send Message",
+            "sending": "Sending...",
+            "success": "Message sent! I'll get back to you soon.",
+            "error": "Failed to send. Try emailing me directly."
         }
     }
 }

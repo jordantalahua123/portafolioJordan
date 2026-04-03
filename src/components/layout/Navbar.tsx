@@ -2,6 +2,8 @@
 
 import { useTheme } from 'next-themes'
 import { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
+import type { Transition } from 'framer-motion'
 import { Home, FileText, Briefcase, BookOpen, Mail, Sun, Moon, ChevronDown, Menu, X, GraduationCap, Zap } from 'lucide-react'
 import { useLanguage } from '@/lib/context/LanguageContext'
 import { useNavigation } from '@/hooks/useNavigation'
@@ -9,6 +11,8 @@ import { navigationItems } from '@/lib/utils'
 import { cn } from '@/lib/utils'
 import Sidebar from './Sidebar'
 import { theme } from '@/lib/theme'
+
+const springTap: Transition = { type: 'spring', stiffness: 400, damping: 17 }
 
 const iconMap = {
     Home,
@@ -71,15 +75,18 @@ export default function Navbar() {
                             const isActive = activeSection === item.id
 
                             return (
-                                <button
+                                <motion.button
                                     key={item.id}
                                     onClick={() => navigateTo(item.id)}
-                                    style={{ 
+                                    whileHover={{ scale: 1.05 }}
+                                    whileTap={{ scale: 0.92 }}
+                                    transition={springTap}
+                                    style={{
                                         backgroundColor: isActive ? colors.primary : 'transparent',
                                         color: isActive ? colors.background : colors.foreground
                                     }}
                                     className={cn(
-                                        "flex items-center gap-2 px-4 py-2 rounded-xl transition-all duration-300",
+                                        "flex items-center gap-2 px-4 py-2 rounded-xl transition-colors duration-200",
                                         !isActive && "hover:bg-opacity-10"
                                     )}
                                 >
@@ -87,7 +94,7 @@ export default function Navbar() {
                                     <span className="font-medium">
                                         {t(item.labelKey)}
                                     </span>
-                                </button>
+                                </motion.button>
                             )
                         })}
                     </div>
@@ -96,8 +103,11 @@ export default function Navbar() {
                     <div className="flex items-center gap-4">
                         {/* Selector de idioma */}
                         <div className="relative">
-                            <button
+                            <motion.button
                                 onClick={() => setIsLangOpen(!isLangOpen)}
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.9 }}
+                                transition={springTap}
                                 style={{ backgroundColor: colors.muted }}
                                 className="flex items-center gap-2 px-3 py-2 rounded-lg transition-colors"
                             >
@@ -109,11 +119,11 @@ export default function Navbar() {
                                     "transition-transform",
                                     isLangOpen && "rotate-180"
                                 )} />
-                            </button>
+                            </motion.button>
 
                             {isLangOpen && (
-                                <div style={{ backgroundColor: colors.background }} 
-                                    className="absolute top-full right-0 mt-2 w-32 rounded-lg shadow-lg border border-opacity-10 z-50">
+                                <div style={{ backgroundColor: colors.background, border: `1px solid ${colors.foreground}1A` }}
+                                    className="absolute top-full right-0 mt-2 w-32 rounded-lg shadow-lg z-50">
                                     {languages.map((lang) => (
                                         <button
                                             key={lang.code}
@@ -136,22 +146,27 @@ export default function Navbar() {
                         </div>
 
                         {/* Toggle de tema */}
-                        <button
+                        <motion.button
                             onClick={handleThemeToggle}
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ rotate: 180, scale: 0.85 }}
+                            transition={springTap}
                             style={{ backgroundColor: colors.muted }}
                             className="p-2 rounded-lg transition-colors"
                         >
                             {currentTheme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
-                        </button>
+                        </motion.button>
 
                         {/* Menú hamburger para navegación - Solo móvil */}
-                        <button
+                        <motion.button
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
+                            whileTap={{ scale: 0.88 }}
+                            transition={springTap}
                             style={{ backgroundColor: colors.muted }}
                             className="lg:hidden p-2 rounded-lg"
                         >
                             {isMenuOpen ? <X size={18} /> : <Menu size={18} />}
-                        </button>
+                        </motion.button>
                     </div>
                 </div>
 
@@ -164,23 +179,25 @@ export default function Navbar() {
                                 const isActive = activeSection === item.id
 
                                 return (
-                                    <button
+                                    <motion.button
                                         key={item.id}
                                         onClick={() => {
                                             navigateTo(item.id)
                                             setIsMenuOpen(false)
                                         }}
-                                        style={{ 
+                                        whileTap={{ scale: 0.95 }}
+                                        transition={springTap}
+                                        style={{
                                             backgroundColor: isActive ? colors.primary : 'transparent',
                                             color: isActive ? colors.background : colors.foreground
                                         }}
-                                        className="w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300"
+                                        className="w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors duration-200"
                                     >
                                         <IconComponent size={18} />
                                         <span className="font-medium">
                                             {t(item.labelKey)}
                                         </span>
-                                    </button>
+                                    </motion.button>
                                 )
                             })}
                         </div>

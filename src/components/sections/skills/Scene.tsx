@@ -9,6 +9,7 @@ import { Physics } from '@react-three/rapier'
 import { Html, Sky } from '@react-three/drei'
 import { useTheme } from 'next-themes'
 import { sceneColors } from './colors'
+import { useLanguage } from '@/lib/context/LanguageContext'
 
 // Componente de loading para Three.js
 function SceneLoading() {
@@ -27,6 +28,7 @@ function SceneLoading() {
 
 export default function Scene() {
     const { theme: currentTheme } = useTheme()
+    const { t } = useLanguage()
     const [mounted, setMounted] = useState(false)
     
     useEffect(() => {
@@ -141,14 +143,19 @@ export default function Scene() {
             </Canvas>
 
             {/* Instrucciones de navegación */}
-            <div className="absolute bottom-4 left-4 right-4 text-center text-xs md:text-sm text-amber-200">
-                <div className="bg-amber-900/50 backdrop-blur-sm rounded-lg p-3 border border-amber-600/30">
-                    <p className="mb-2">🎮 <strong>CONTROLES:</strong></p>
+            <div className="absolute bottom-4 left-4 right-4 text-center text-xs md:text-sm"
+                style={{ color: colors.ui.title }}>
+                <div className="backdrop-blur-sm rounded-lg p-3"
+                    style={{
+                        backgroundColor: `${colors.ui.title}20`,
+                        border: `1px solid ${colors.ui.border}50`
+                    }}>
+                    <p className="mb-2">🎮 <strong>{t('skills.controls.title')}:</strong></p>
                     <div className="flex flex-wrap justify-center gap-4 text-xs">
-                        <span>Click Izquierdo + Arrastrar = Rotar Cámara</span>
-                        <span>Click Derecho + Arrastrar = Mover Cámara</span>
-                        <span>Scroll = Zoom</span>
-                        <span><strong>W, A, S, D</strong> = Mover Auto</span>
+                        <span>{t('skills.controls.rotateCamera')}</span>
+                        <span>{t('skills.controls.moveCamera')}</span>
+                        <span>{t('skills.controls.zoom')}</span>
+                        <span><strong>W, A, S, D</strong> = {t('skills.controls.moveCar')}</span>
                     </div>
                 </div>
             </div>

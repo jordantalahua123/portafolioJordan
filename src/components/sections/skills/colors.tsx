@@ -40,6 +40,14 @@ export const sceneColors = {
             dust: '#f5e6d3',       // Polvo del desierto
             shadows: '#2c1810',    // Color de sombras
             fog: '#fff8e1',        // Niebla del desierto
+        },
+
+        // Colores para overlays y UI del tema western
+        ui: {
+            title: '#b45309',      // Amber oscuro para títulos
+            subtitle: '#92400e',   // Amber más oscuro para subtítulos
+            loading: '#92400e',    // Color de texto de carga
+            border: '#b45309',     // Color de bordes
         }
     },
 
@@ -85,6 +93,14 @@ export const sceneColors = {
             dust: '#4a4a4a',       // Polvo nocturno
             shadows: '#000000',    // Sombras más oscuras
             fog: '#1a1a1a',        // Niebla nocturna
+        },
+
+        // Colores para overlays y UI del tema western (modo oscuro)
+        ui: {
+            title: '#fde68a',      // Amber claro para títulos en modo oscuro
+            subtitle: '#fef3c7',   // Amber muy claro para subtítulos
+            loading: '#fde68a',    // Color de texto de carga
+            border: '#fde68a',     // Color de bordes
         }
     }
 }; 
