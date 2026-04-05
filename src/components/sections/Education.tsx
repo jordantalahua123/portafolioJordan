@@ -63,7 +63,7 @@ export default function Education() {
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: 0.2 * index, duration: 0.6 }}
-                            style={{ backgroundColor: colors.muted }}
+                            style={{ backgroundColor: `${colors.muted}cc`, backdropFilter: 'blur(12px)' }}
                             className="rounded-2xl p-6 relative overflow-hidden group hover:shadow-lg transition-shadow"
                         >
                             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/10 to-transparent rounded-full blur-2xl"></div>
@@ -93,7 +93,7 @@ export default function Education() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.2 * index, duration: 0.6 }}
-                            style={{ backgroundColor: colors.muted }}
+                            style={{ backgroundColor: `${colors.muted}cc`, backdropFilter: 'blur(12px)' }}
                             className="rounded-2xl p-6 relative group hover:shadow-lg transition-shadow"
                         >
                             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-secondary/10 to-transparent rounded-full blur-2xl"></div>

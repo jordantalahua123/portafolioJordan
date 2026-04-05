@@ -153,7 +153,7 @@ export default function Experience() {
                                     onClick={() => toggleJob(job.id)}
                                 >
                                     <motion.div
-                                        style={{ backgroundColor: colors.muted }}
+                                        style={{ backgroundColor: `${colors.muted}cc`, backdropFilter: 'blur(12px)' }}
                                         className="rounded-2xl p-6 hover:shadow-2xl transition-shadow duration-300 relative overflow-hidden group"
                                     >
                                         {/* Decoración de fondo */}
@@ -269,7 +269,7 @@ export default function Experience() {
                 ].map((stat, index) => (
                     <div
                         key={stat.label}
-                        style={{ backgroundColor: colors.muted }}
+                        style={{ backgroundColor: `${colors.muted}cc`, backdropFilter: 'blur(12px)' }}
                         className="rounded-xl p-6 text-center"
                     >
                         <div className="text-3xl mb-2">{stat.icon}</div>

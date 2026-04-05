@@ -6,29 +6,16 @@ import { useTheme } from 'next-themes'
 import { theme } from '@/lib/theme'
 import { FaExternalLinkAlt, FaGooglePlay, FaGlobe, FaCode } from 'react-icons/fa'
 import { useState } from 'react'
-import Image from 'next/image'
-import { useTilt } from '@/hooks/useTilt'
+import dynamic from 'next/dynamic'
 
-function TiltProjectCard({ children, className, style, onClick }: {
-    children: React.ReactNode
-    className?: string
-    style?: React.CSSProperties
-    onClick?: () => void
-}) {
-    const { ref, handleMouseMove, handleMouseLeave } = useTilt({ maxTilt: 6, scale: 1.03 })
-    return (
-        <div
-            ref={ref}
-            className={className}
-            style={{ ...style, transformStyle: 'preserve-3d', willChange: 'transform' }}
-            onMouseMove={handleMouseMove}
-            onMouseLeave={handleMouseLeave}
-            onClick={onClick}
-        >
-            {children}
+const WorksTiles3D = dynamic(() => import('@/components/3d/works/WorksTiles3D'), {
+    ssr: false,
+    loading: () => (
+        <div className="flex items-center justify-center h-64 opacity-50">
+            <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-indigo-400" />
         </div>
-    )
-}
+    ),
+})
 
 export default function Works() {
     const { t } = useLanguage()
@@ -43,13 +30,7 @@ export default function Works() {
             color: '#0ea5e9',
             gradient: 'from-sky-500 to-blue-600',
             image: '/projects/ecuaroad.jpg',
-            links: [
-                {
-                    type: 'web',
-                    url: 'https://equasoft.ec',
-                    label: 'Equasoft'
-                }
-            ]
+            links: [{ type: 'web', url: 'https://equasoft.ec', label: 'Equasoft' }]
         },
         {
             id: 'chefhostschool',
@@ -57,13 +38,7 @@ export default function Works() {
             color: '#16a34a',
             gradient: 'from-green-500 to-emerald-600',
             image: '/projects/chefhostschool.jpg',
-            links: [
-                {
-                    type: 'web',
-                    url: 'https://chefhostschool.com/sign-in',
-                    label: 'Ver Sitio'
-                }
-            ]
+            links: [{ type: 'web', url: 'https://chefhostschool.com/sign-in', label: 'Ver Sitio' }]
         },
         {
             id: 'pool',
@@ -71,13 +46,7 @@ export default function Works() {
             color: '#ec4899',
             gradient: 'from-pink-500 to-purple-600',
             image: '/projects/pool.jpg',
-            links: [
-                {
-                    type: 'playstore',
-                    url: 'https://play.google.com/store/apps/details?id=com.poolcommunity.PoolApp&hl=es_EC',
-                    label: 'Google Play'
-                }
-            ]
+            links: [{ type: 'playstore', url: 'https://play.google.com/store/apps/details?id=com.poolcommunity.PoolApp&hl=es_EC', label: 'Google Play' }]
         },
         {
             id: 'ammeno',
@@ -86,16 +55,8 @@ export default function Works() {
             gradient: 'from-purple-500 to-indigo-600',
             image: '/projects/ammeno.jpg',
             links: [
-                {
-                    type: 'playstore',
-                    url: 'https://play.google.com/store/apps/details?id=com.seneca.ammeno_app',
-                    label: 'Google Play'
-                },
-                {
-                    type: 'web',
-                    url: 'https://www.ammeno.app/',
-                    label: 'Sitio Web'
-                }
+                { type: 'playstore', url: 'https://play.google.com/store/apps/details?id=com.seneca.ammeno_app', label: 'Google Play' },
+                { type: 'web', url: 'https://www.ammeno.app/', label: 'Sitio Web' }
             ]
         },
         {
@@ -104,13 +65,7 @@ export default function Works() {
             color: '#14b8a6',
             gradient: 'from-teal-500 to-cyan-600',
             image: '/projects/gamerfest.jpg',
-            links: [
-                {
-                    type: 'web',
-                    url: 'https://espelgamerfest.com/',
-                    label: 'Ver Sitio'
-                }
-            ]
+            links: [{ type: 'web', url: 'https://espelgamerfest.com/', label: 'Ver Sitio' }]
         },
         {
             id: 'maki',
@@ -118,26 +73,24 @@ export default function Works() {
             color: '#f59e0b',
             gradient: 'from-amber-500 to-orange-600',
             image: '/projects/maki.jpg',
-            links: [
-                {
-                    type: 'web',
-                    url: 'https://fenixcorp.fenixerp.com/maki-administrador',
-                    label: 'Ver Proyecto'
-                }
-            ]
+            links: [{ type: 'web', url: 'https://fenixcorp.fenixerp.com/maki-administrador', label: 'Ver Proyecto' }]
         }
     ]
 
-    const openModal = (projectId: string) => {
-        setSelectedProject(projectId)
-    }
+    // Data for 3D tiles
+    const tilesData = projects.map((p) => ({
+        id: p.id,
+        title: t(`works.projects.${p.id}.title`) as string,
+        description: t(`works.projects.${p.id}.description`) as string,
+        color: p.color,
+        icon: p.icon,
+        links: p.links.map((l) => ({ url: l.url, label: l.label })),
+    }))
 
-    const closeModal = () => {
-        setSelectedProject(null)
-    }
+    const closeModal = () => setSelectedProject(null)
 
     return (
-        <div className="max-w-7xl mx-auto space-y-16 p-6 lg:p-8">
+        <div className="max-w-7xl mx-auto space-y-10 p-6 lg:p-8">
             {/* Header */}
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -146,96 +99,33 @@ export default function Works() {
                 className="text-center"
             >
                 <h1 className="text-4xl lg:text-5xl font-bold mb-4">{t('works.title')}</h1>
-                <p className="text-lg opacity-70 max-w-2xl mx-auto">
-                    {t('works.subtitle')}
-                </p>
+                <p className="text-lg opacity-70 max-w-2xl mx-auto">{t('works.subtitle')}</p>
             </motion.div>
 
-            {/* Grid de proyectos */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {projects.map((project, index) => {
-                    const projectTitle = t(`works.projects.${project.id}.title`)
-                    const projectDescription = t(`works.projects.${project.id}.description`)
-                    const projectTechnologies = t(`works.projects.${project.id}.technologies`) as unknown as string[]
-                    
-                    return (
-                        <motion.div
-                            key={project.id}
-                            initial={{ opacity: 0, y: 50 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: index * 0.1, duration: 0.6 }}
-                        >
-                            <TiltProjectCard
-                                style={{ backgroundColor: colors.muted }}
-                                className="rounded-3xl overflow-hidden group hover:shadow-2xl transition-shadow duration-300 cursor-pointer"
-                                onClick={() => openModal(project.id)}
-                            >
-                                {/* Imagen del proyecto */}
-                                <div className="relative h-64 overflow-hidden bg-gradient-to-br" style={{ backgroundImage: `linear-gradient(135deg, ${project.color}20, ${project.color}10)` }}>
-                                    <div className="absolute inset-0 flex items-center justify-center text-8xl group-hover:scale-110 transition-transform duration-300">
-                                        {project.icon}
-                                    </div>
-                                    <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-300`} />
-                                </div>
+            {/* 3D tiles */}
+            <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2, duration: 0.7 }}
+            >
+                <WorksTiles3D projects={tilesData} />
+            </motion.div>
 
-                                {/* Contenido */}
-                                <div className="p-6">
-                                    <h3 className="text-2xl font-bold mb-2">
-                                        {projectTitle}
-                                    </h3>
-                                    <p className="text-sm opacity-70 mb-4 line-clamp-2">
-                                        {projectDescription}
-                                    </p>
-
-                                    {/* Tecnologías */}
-                                    <div className="flex flex-wrap gap-2 mb-4">
-                                        {Array.isArray(projectTechnologies) && projectTechnologies.slice(0, 4).map((tech: string) => (
-                                            <span
-                                                key={tech}
-                                                className="px-3 py-1 rounded-full text-xs font-medium"
-                                                style={{ 
-                                                    backgroundColor: `${project.color}20`,
-                                                    color: project.color
-                                                }}
-                                            >
-                                                {tech}
-                                            </span>
-                                        ))}
-                                        {Array.isArray(projectTechnologies) && projectTechnologies.length > 4 && (
-                                            <span className="px-3 py-1 rounded-full text-xs font-medium opacity-50">
-                                                +{projectTechnologies.length - 4}
-                                            </span>
-                                        )}
-                                    </div>
-
-                                    {/* Links */}
-                                    <div className="flex gap-3">
-                                        {project.links.map((link, idx) => (
-                                            <a
-                                                key={idx}
-                                                href={link.url}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                onClick={(e) => e.stopPropagation()}
-                                                className="flex items-center gap-2 px-4 py-2 rounded-xl font-medium text-sm hover:opacity-80 transition-opacity"
-                                                style={{ 
-                                                    backgroundColor: `${project.color}20`,
-                                                    color: project.color
-                                                }}
-                                            >
-                                                {link.type === 'playstore' ? <FaGooglePlay /> : <FaGlobe />}
-                                                {link.label}
-                                            </a>
-                                        ))}
-                                    </div>
-                                </div>
-                            </TiltProjectCard>
-                        </motion.div>
-                    )
-                })}
+            {/* Accessible fallback card list (visually hidden but keyboard navigable) */}
+            <div className="sr-only">
+                {projects.map((project) => (
+                    <div key={project.id}>
+                        <h3>{t(`works.projects.${project.id}.title`)}</h3>
+                        {project.links.map((link, i) => (
+                            <a key={i} href={link.url} target="_blank" rel="noopener noreferrer">
+                                {link.label}
+                            </a>
+                        ))}
+                    </div>
+                ))}
             </div>
 
-            {/* Modal de detalles */}
+            {/* Detail modal (click a tile → opens modal) */}
             {selectedProject && (
                 <motion.div
                     initial={{ opacity: 0 }}
@@ -258,10 +148,9 @@ export default function Works() {
                             const projectDescription = t(`works.projects.${selectedProject}.description`)
                             const projectFeatures = t(`works.projects.${selectedProject}.features`) as unknown as string[]
                             const projectTechnologies = t(`works.projects.${selectedProject}.technologies`) as unknown as string[]
-                            
+
                             return (
                                 <>
-                                    {/* Header */}
                                     <div className="flex items-start justify-between mb-6">
                                         <div>
                                             <div className="flex items-center gap-3 mb-2">
@@ -270,22 +159,16 @@ export default function Works() {
                                             </div>
                                             <p className="opacity-70">{projectDescription}</p>
                                         </div>
-                                        <button 
-                                            onClick={closeModal}
-                                            className="text-3xl hover:opacity-70 transition-opacity"
-                                        >
-                                            ×
-                                        </button>
+                                        <button onClick={closeModal} className="text-3xl hover:opacity-70 transition-opacity">×</button>
                                     </div>
 
-                                    {/* Features */}
                                     <div className="mb-6">
                                         <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
                                             <FaCode style={{ color: project.color }} />
                                             {t('works.mainFeatures')}
                                         </h3>
                                         <ul className="space-y-2">
-                                            {Array.isArray(projectFeatures) && projectFeatures.map((feature: string, idx: number) => (
+                                            {Array.isArray(projectFeatures) && projectFeatures.map((feature, idx) => (
                                                 <li key={idx} className="flex gap-2 text-sm opacity-80">
                                                     <span style={{ color: project.color }}>▸</span>
                                                     <span>{feature}</span>
@@ -294,39 +177,23 @@ export default function Works() {
                                         </ul>
                                     </div>
 
-                                    {/* Tecnologías completas */}
                                     <div className="mb-6">
                                         <h3 className="text-xl font-semibold mb-3">{t('works.technologies')}</h3>
                                         <div className="flex flex-wrap gap-2">
-                                            {Array.isArray(projectTechnologies) && projectTechnologies.map((tech: string) => (
-                                                <span
-                                                    key={tech}
-                                                    className="px-4 py-2 rounded-full text-sm font-medium"
-                                                    style={{ 
-                                                        backgroundColor: `${project.color}20`,
-                                                        color: project.color
-                                                    }}
-                                                >
+                                            {Array.isArray(projectTechnologies) && projectTechnologies.map((tech) => (
+                                                <span key={tech} className="px-4 py-2 rounded-full text-sm font-medium"
+                                                    style={{ backgroundColor: `${project.color}20`, color: project.color }}>
                                                     {tech}
                                                 </span>
                                             ))}
                                         </div>
                                     </div>
 
-                                    {/* Links */}
                                     <div className="flex gap-3 flex-wrap">
                                         {project.links.map((link, idx) => (
-                                            <a
-                                                key={idx}
-                                                href={link.url}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
+                                            <a key={idx} href={link.url} target="_blank" rel="noopener noreferrer"
                                                 className="flex items-center gap-2 px-6 py-3 rounded-xl font-medium hover:opacity-80 transition-opacity"
-                                                style={{ 
-                                                    backgroundColor: project.color,
-                                                    color: 'white'
-                                                }}
-                                            >
+                                                style={{ backgroundColor: project.color, color: 'white' }}>
                                                 {link.type === 'playstore' ? <FaGooglePlay /> : <FaGlobe />}
                                                 {link.label}
                                                 <FaExternalLinkAlt size={12} />

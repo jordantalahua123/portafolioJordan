@@ -52,7 +52,7 @@ function BlogCard({ postKey, colors }: { postKey: string, colors: typeof theme['
             className="h-full"
         >
             <motion.div
-                style={{ backgroundColor: colors.muted, borderTop: `3px solid ${color}` }}
+                style={{ backgroundColor: `${colors.muted}cc`, backdropFilter: 'blur(12px)', borderTop: `3px solid ${color}` }}
                 className="rounded-2xl p-6 h-full flex flex-col hover:shadow-xl transition-shadow duration-300 group relative overflow-hidden"
             >
                 {/* Decorative glow */}

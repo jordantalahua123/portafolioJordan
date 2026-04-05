@@ -73,7 +73,7 @@ export default function Contact() {
                                     initial={{ opacity: 0, x: -15 }}
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ delay: 0.3 + i * 0.07, duration: 0.4 }}
-                                    style={{ backgroundColor: colors.muted }}
+                                    style={{ backgroundColor: `${colors.muted}cc`, backdropFilter: 'blur(12px)' }}
                                     className="flex items-center gap-4 p-4 rounded-xl"
                                 >
                                     <div
@@ -116,7 +116,7 @@ export default function Contact() {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex items-center gap-2 px-4 py-3 rounded-xl font-medium text-sm transition-opacity hover:opacity-80"
-                                    style={{ backgroundColor: colors.muted, color: colors.foreground }}
+                                    style={{ backgroundColor: `${colors.muted}cc`, backdropFilter: 'blur(12px)', color: colors.foreground }}
                                 >
                                     <Icon size={20} style={{ color }} />
                                     {label}
@@ -131,7 +131,7 @@ export default function Contact() {
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.2, duration: 0.5 }}
-                    style={{ backgroundColor: colors.muted }}
+                    style={{ backgroundColor: `${colors.muted}cc`, backdropFilter: 'blur(12px)' }}
                     className="rounded-2xl p-6"
                 >
                     <h2 className="text-xl font-bold mb-5">{t('contact.form.title')}</h2>
